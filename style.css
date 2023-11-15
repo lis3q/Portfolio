@@ -9,7 +9,14 @@ body {
 }
 html {
     scroll-behavior: smooth;
-    scroll-padding-top: 12%;
+    scroll-padding-top: 9%;
+}
+::-webkit-scrollbar {
+    background: #4f5c6d;
+    width: 12px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--orange);
 }
 /* Color variables */
 :root {
@@ -69,6 +76,12 @@ nav {
     right: 0;
     background: var(--darkblue);
     z-index: 20;
+    transition: all .22s ease-in-out;
+}
+nav.sticky {
+    height: 90px;
+    background: #21262c;
+    /* box-shadow: 0px 0px 10px 5px #4f5c6d3f; */
 }
 @keyframes logo {
     0%   { transform: translateX(0); }
@@ -184,6 +197,7 @@ nav .links a.active {
 #about .about-content {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-top: 12%;
 }
 #about .info {
@@ -218,7 +232,7 @@ nav .links a.active {
 }
 #about .info .p-data .col p {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 400;
+    font-weight: 500;
     color: var(--grey);
 }
 #about .info .p-data .col .text {
@@ -227,11 +241,12 @@ nav .links a.active {
     font-size: 0.95em;
     text-align: justify;
     margin-top: 5px;
-    font-weight: 300;
-    font-weight: 500;
+    font-weight: 400;
     padding-bottom: 5%;
+    line-height: 25px;
 }
 #about .info .p-data .col a {
+    margin-top: 14px;
     padding: 12px 10%;
     background: var(--orange);
     color: var(--white);
@@ -283,23 +298,12 @@ nav .links a.active {
     height: 100%;
     opacity: 0;
     transition: all .3s ease-in-out;
-}
-#projects .projects-content .box .image .overlay p {
-    text-align: justify;
-    padding-top: 12%;
-    color: var(--white);
-    width: 80%;
-    margin: 0 auto;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.1em;
-}
-#projects .projects-content .box .image .overlay:hover {
-    opacity: 1;
-}
-#projects .projects-content .box .image .overlay .buttons {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+#projects .projects-content .box .image .overlay:hover {
+    opacity: 1;
 }
 #projects .projects-content .box .image .overlay a {
     text-decoration: none;
@@ -365,6 +369,7 @@ nav .links a.active {
     font-size: 1.1em;
     font-family: 'Montserrat', sans-serif;
     color: var(--grey);
+    transition: all 0.06s;
 }
 #contact .contact-content textarea {
     height: 300px;
@@ -380,8 +385,19 @@ nav .links a.active {
     padding: 0;
     transition: all .2s ease-in-out;
 }
+#contact .contact-content input[type="text"]:focus,
+#contact .contact-content input[type="email"]:focus,
+#contact .contact-content textarea:focus {
+    border-left: 2px solid var(--orange);
+    background: #313b46;
+    color: var(--white);
+}
+input:focus::placeholder,
+textarea:focus::placeholder {
+    color: var(--white);
+}
 #contact .contact-content input[type="submit"]:hover {
-    background: #ffb152;
+    background: #e67e00;
 }
 
 
@@ -390,23 +406,17 @@ nav .links a.active {
 footer {
     background: var(--darkblue);
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    padding: 1% 10% 2% 10%;
-}
-footer h2 {
-    color: var(--white);
-    font-family: 'Roboto Condensed', sans-serif;
-    font-size: 2.3em;
+    padding: 2% 30%;
 }
 footer .icons {
-    margin: 35px 0;
     display: flex;
 }
 footer .icons a {
-    background: var(--orange);
-    width: 50px;
-    height: 50px;
+    background: var(--blue);
+    width: 55px;
+    height: 52px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
@@ -415,12 +425,13 @@ footer .icons a {
     margin: 0 15px;
     transition: all .2s ease-in-out;
 }
-footer .icons a:hover {
-    background: #ffb152;
+footer .icons a:hover i {
+    color: var(--orange);
 }
 footer .icons i {
     color: var(--white);
-    font-size: 1.5em;
+    font-size: 1.4em;
+    transition: all .2s ease-in-out;
 }
 footer .links a {
     margin: 0 25px;
@@ -433,12 +444,9 @@ footer .links a {
 footer .links a:hover {
     color: #666666;
 }
-footer hr {
-    margin-top: 30px;
-}
 footer p {
-    margin-top: 12px;
     color: var(--grey);
-    font-family: 'Teko', sans-serif;
-    font-size: 1.3em;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1em;
+    letter-spacing: 1.5px;
 }
