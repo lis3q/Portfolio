@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@200;400;500;600;700;800&display=swap'); /* Roboto Condensed font */
 @import url('https://fonts.googleapis.com/css2?family=Teko&display=swap'); /* Teko font */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800&display=swap'); /* Montserrat font */
+
+/* Main settings */
 * {
     margin: 0; padding: 0; box-sizing: border-box;
 }
@@ -12,7 +14,7 @@ html {
     scroll-padding-top: 9%;
 }
 ::-webkit-scrollbar {
-    background: #4f5c6d;
+    background: var(--button);
     width: 12px;
 }
 ::-webkit-scrollbar-thumb {
@@ -25,8 +27,46 @@ html {
     --darkblue: #1B1F24;
     --grey: #818181;
     --blue: #242B33;
+    --stickynav: #21262c;
+    --mobilenav: #313b46;
+    --button: #4f5c6d;
+    --buttonhover: #313b46;
+    --overlaybtn: #242b33cb;
 }
 
+/* Theme colors */
+.themes {
+    position: fixed;
+    top: 50%;
+    left: 3%;
+    transform: translate(-3%, -50%);
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 15px;
+    border-radius: 15px;
+    z-index: 70;
+}
+.themes .color {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 15px;
+    cursor: pointer;
+}
+.themes .color.blue {
+    background: linear-gradient(220deg, rgba(68,81,96,1) 10%, rgb(140, 163, 192) 100%);
+}
+.themes .color.white {
+    background: linear-gradient(220deg, rgba(255,255,255,1) 10%, rgb(175, 175, 175) 100%);
+}
+.themes .color.black {
+    background: linear-gradient(220deg, rgba(50,50,50,1) 10%, rgba(103,103,103,1) 100%);
+}
+
+/* Heading */
 .heading h1 {
     text-align: center;
     font-family: 'Teko', sans-serif;
@@ -75,12 +115,12 @@ nav {
     left: 0;
     right: 0;
     background: var(--darkblue);
-    z-index: 20;
+    z-index: 80;
     transition: all .22s ease-in-out;
 }
 nav.sticky {
     height: 90px;
-    background: #21262c;
+    background: var(--stickynav);
     /* box-shadow: 0px 0px 10px 5px #4f5c6d3f; */
 }
 @keyframes logo {
@@ -146,18 +186,18 @@ nav .links a.active {
 
 .mobilenav {
     transform: translateX(400px);
-    display: flex;
-    opacity: 0;
+    display: none;
     position: fixed;
-    top: 90px;
+    top: 89px;
     right: 0;
     width: 100%;
-    background: #313b46;
+    background: var(--mobilenav);
     height: 100vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     transition: 0.5s;
+    z-index: 90;
 }
 .mobilenav a {
     margin: 0 0 25% 0;
@@ -173,6 +213,7 @@ nav .links a.active {
 }
 .mobilenav.active {
     opacity: 0.96;
+    display: flex;
     transform: translateX(0);
 }
 
@@ -232,9 +273,8 @@ nav .links a.active {
     border-radius: 5px;
 }
 .content .intro .buttons .btn i {
-    color: var(--white);
     font-size: 1.4em;
-    color: #4f5c6d;
+    color: var(--button);
 }
 .content .intro .buttons .btn {
     text-decoration: none;
@@ -243,7 +283,7 @@ nav .links a.active {
     transition: all .4s ease-in-out;
 }
 .content .intro .buttons .btn:hover {
-    background: #313b46
+    background: var(--buttonhover);
 }
 
 /* Content image */
@@ -379,7 +419,7 @@ nav .links a.active {
     margin: 8% 4%;
     font-family: 'Montserrat', sans-serif;
     font-size: 1.1em;
-    background: #242b33cb;
+    background: var(--overlaybtn);
     padding: 15px 25px;
     border-radius: 5px;
     transition: all .2s ease-in-out;
@@ -457,7 +497,7 @@ nav .links a.active {
 #contact .contact-content input[type="email"]:focus,
 #contact .contact-content textarea:focus {
     border-left: 2px solid var(--orange);
-    background: #313b46;
+    background: var(--mobilenav);
     color: var(--white);
 }
 input:focus::placeholder,
@@ -634,6 +674,13 @@ footer p {
         width: 100%;
         height: 200px;
     }
+    #projects .projects-content .box .image .overlay {
+        flex-direction: column;
+    }
+    #projects .projects-content .box .image .overlay a {
+        font-size: 1em;
+        margin: 3% 0;
+    }
     /* Contact */
     #contact {
         padding: 6%;
@@ -643,13 +690,23 @@ footer p {
     }
     #contact .contact-content input,
     #contact .contact-content textarea {
-    height: 56px;
-    width: 100%;
-    padding: 15px;
+        height: 56px;
+        width: 100%;
+        padding: 15px;
     }
     footer {
         flex-direction: column;
         gap: 24px;
         padding: 10% 6%;
+    }
+    /* Themes */
+    .themes {
+        bottom: 1%;
+        left: 50%;
+        top: 90%;
+        transform: translate(-50%, -1%);
+        flex-direction: row;
+        background: #0000005d;
+        height: 50px;
     }
 }

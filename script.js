@@ -57,3 +57,42 @@ hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
     mobilenav.classList.toggle("active");
 })
+
+
+// Color themes 
+let white = document.querySelector(".themes .color.white");
+white.addEventListener("click", () => {
+    document.documentElement.style.setProperty('--darkblue', '#fff');
+    document.documentElement.style.setProperty('--white', '#1f1f1f');
+    document.documentElement.style.setProperty('--stickynav', '#f2f2f2');
+    document.documentElement.style.setProperty('--mobilenav', '#f5f5f5');
+    document.documentElement.style.setProperty('--blue', '#fafafa');
+    document.documentElement.style.setProperty('--buttonhover', '#ededed');
+    document.documentElement.style.setProperty('--button', '#1f1f1f');
+    document.documentElement.style.setProperty('--overlaybtn', '#fafafacb');
+})
+
+let black = document.querySelector(".themes .color.black");
+black.addEventListener("click", () => {
+    document.documentElement.style.setProperty('--white', '#fff');
+    document.documentElement.style.setProperty('--darkblue', '#1f1f1f');
+    document.documentElement.style.setProperty('--blue', '#292929');
+    document.documentElement.style.setProperty('--stickynav', '#2e2e2e');
+    document.documentElement.style.setProperty('--mobilenav', '#383838');
+    document.documentElement.style.setProperty('--buttonhover', '#383838');
+    document.documentElement.style.setProperty('--button', '#575757');
+    document.documentElement.style.setProperty('--button', '#575757');
+    document.documentElement.style.setProperty('--overlaybtn', '#292929cb');
+})
+
+
+let blue = document.querySelector(".themes .color.blue");
+blue.addEventListener("click", () => {
+    document.documentElement.style.setProperty('--white', '#fff');
+    document.documentElement.style.setProperty('--darkblue', '#1B1F24');
+    document.documentElement.style.setProperty('--blue', '#242B33');
+    document.documentElement.style.setProperty('--stickynav', '#21262c');
+    document.documentElement.style.setProperty('--mobilenav', '#313b46');
+    document.documentElement.style.setProperty('--buttonhover', '#313b46');
+    document.documentElement.style.setProperty('--button', '#4f5c6d');
+})
