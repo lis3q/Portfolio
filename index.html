@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <title>Szymon Lisek - Portfolio website</title>
     
     <script src="https://unpkg.com/scrollreveal"></script>
@@ -22,19 +22,27 @@
         <nav class="nav">
             <div class="logo"><h1><i class="fa-solid fa-code"></i> Szymon.</h1></div>
             <div class="links">
-                <a href="#home" class="link active">Home</a>
-                <a href="#about" class="link">About me</a>
-                <a href="#projects" class="link">My projects</a>
-                <a href="#contact" class="link">Contact</a>
+                <a href="#home" class="link active">Strona główna</a>
+                <a href="#about" class="link">O mnie</a>
+                <a href="#projects" class="link">Projekty</a>
+                <a href="#contact" class="link">Kontakt</a>
+            </div>
+            <div class="icons">
+                <a href="https://www.instagram.com/lis3q_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://github.com/lis3q" target="_blank"><i class="fa-brands fa-github"></i></a>
             </div>
             <button class="hamburger">
                 <div class="bar"></div>
             </button>
             <div class="mobilenav">
-                <a href="#home" class="link active">Home</a>
-                <a href="#about" class="link">About me</a>
-                <a href="#projects" class="link">My projects</a>
-                <a href="#contact" class="link">Contact</a>     
+                <a href="#home" class="link active">Strona główna</a>
+                <a href="#about" class="link">O mnie</a>
+                <a href="#projects" class="link">Projekty</a>
+                <a href="#contact" class="link">Kontakt</a>   
+                <div class="mobile-icons">
+                    <a href="https://www.instagram.com/lis3q_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://github.com/lis3q" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </div>  
             </div>
         </nav>
 
@@ -42,11 +50,11 @@
         <div class="content">
             <div class="intro">
                 <div class="mobile-img"></div>
-                <h2>I'm <span>Szymon</span>, a<br>Web Developer</h2>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Est, deserunt. Maxime assumenda, ad tempore, odio vel necessitatibus voluptas vitae corrupti recusandae temporibus quibusdam minus dolores!</p>
+                <h2>Hej tu <span>Szymon</span> <br>Front-End Developer</h2>
+                <p>Jestem kreatywnym Front-End Developerem gotowym na nowe wyzwania. Moją pasją jest tworzenie estetycznych i funkcjonalnych stron internetowych. Zawsze stawiam na innowacyjne podejście i szybkie uczenie się. Chętnie przyjmę każde nowe zadanie, gotowy na rozwój i współpracę. Hajs mnie nie obchodzi, liczy się dla mnie pasja do kodowania i tworzenia fantastycznych projektów! 🚀💻</p>
                 <div class="buttons">
-                    <a href="#projects" class="btn"><i class="fa-solid fa-folder-open"></i>See my projects</a>
-                    <a href="#about" class="btn"><i class="fa-solid fa-user"></i>More about me</a>
+                    <a href="#projects" class="btn"><i class="fa-solid fa-folder-open"></i>Zobacz moje projekty</a>
+                    <a href="#about" class="btn"><i class="fa-solid fa-user"></i>Więcej o mojej osobie</a>
                 </div>
             </div>
             <div class="image"><img src="img.jpg" alt="me" height="700px"></div>
@@ -57,26 +65,34 @@
     <!-- About section -->
     <section id="about">
         <div class="heading">
-            <h1>About <span>Me</span></h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quaerat odio nulla nemo. Deserunt quaerat amet iste! Quos, excepturi officiis soluta fuga laborum quo maiores possimus saepe ea. Placeat, veritatis! Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            <h1>O <span>mnie</span></h1>
+            <p>W sekcji "O mnie" pragnę podzielić się z Tobą nie tylko moimi umiejętnościami jako Front-End Developera, ale także pasją, która napędza moją twórczość.</p>
             <hr>
         </div>
 
         <!-- About content -->
         <div class="about-content">
-            <div class="image"><img src="me.jpg" alt="me" height="640px"></div>
-            <div class="info">
-                <div class="p-data">
-                    <div class="col"><h2>Hello, I am <span>Szymon Lisek</span></h2></div>
-                    <div class="col"><p class="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Explicabo tempora omnis laborum cum quibusdam, sint placeat odio, sequi voluptate earum, facilis nemo quod? Laudantium, sapiente voluptatibus sunt veniam consequuntur ipsam laborum quos nihil id eveniet recusandae magni explicabo consectetur perferendis. Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corporis placeat magnam impedit, velit a ab voluptatibus? Itaque, labore placeat. Explicabo! Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis ducimus quo corrupti tenetur, reprehenderit fugiat consectetur necessitatibus.</p></div>
-                    <div class="col"><h3>First name</h3> <p>Szymon</p></div>
-                    <div class="col"><h3>Last name</h3> <p>Lisek</p></div>
-                    <div class="col"><h3>Age</h3> <p>17 yo</p></div>
-                    <div class="col"><h3>Country</h3> <p>Poland</p></div>
-                    <div class="col"><h3>Technologies</h3> <p>HTML, CSS, JavaScript, ReactJS, GIT</p></div>
-                    <div class="col"><h3>Interested in</h3> <p>Front-end programming, Web Design, Photography,<br> Photo editing, Videography, Gym and hiking</p></div>
-                    <div class="col"><a href="#">Pobierz CV</a></div>
-                </div>
+            <div class="image"><img src="me.jpg" alt="ja" title="Zachód na Kasprowym Wierchu w Tatrach (1,987 m.n.p.m)"></div>
+            <div class="about">
+                <h1>Szymon Lisek 🦊</h1>
+                <p>Jestem pasjonatem <b>Front-End Developmentu</b>, który czerpie radość z tworzenia inspirujących i funkcjonalnych stron internetowych. Moje podejście opiera się na kombinacji <b>kreatywności</b> i <b>precyzji</b> kodowania, co sprawia, że każdy projekt staje się dla mnie unikalnym <b>wyzwaniem</b> do pokonania. Zdobyłem doświadczenie w projektach różnorodnych pod względem skali i złożoności, zawsze dążąc do <b>doskonałości</b> w każdym detalu. Chętnie przyjmuję nowe <b>wyzwania</b>, gotów do eksplorowania nowych technologii i <b>doskonalenia</b> swoich umiejętności.</p>
+                <br>
+                <p>Obecnie skupiam się na doskonaleniu umiejętności w języku <b>JavaScript</b>. Eksperymentuję z różnymi technologiami, aby tworzyć bardziej <b>efektywne</b> i <b>interaktywne</b> strony internetowe. Moim celem jest <b>pełne</b> opanowanie JavaScript, aby moje projekty były zarówno funkcjonalne, jak i innowacyjne.</p>
+                <br>
+                <p class="hobby">
+                    Do moich zainteresowań należy: 
+                    <ul>
+                        <li>Programowanie Front-End</li>
+                        <li>Web Design</li>
+                        <li>Fotografia</li>
+                        <li>Obróbka zdjęć i wideo</li>
+                        <li>Siłownia</li>
+                        <li>Wspinaczka górska</li>
+                        <li>Podróże</li>
+                    </ul>
+                </p>
+
+                <button class="download-cv-btn">Pobierz CV</button>
             </div>
         </div>
     </section>
@@ -84,42 +100,37 @@
     <!-- Projects section -->
     <section id="projects">
         <div class="heading">
-            <h1>My <span>Projects</span></h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quaerat odio nulla nemo. Deserunt quaerat amet iste! Quos, excepturi officiis soluta fuga laborum quo maiores possimus saepe ea. Placeat, veritatis! Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            <h1>Moje <span>projekty</span></h1>
+            <p>W sekcji "Moje Projekty" chciałbym podzielić się z Tobą moją podróżą przez różnorodne wyzwania Front-End developmentu.</p>
             <hr>
         </div>
 
         <!-- Projects content -->
         <div class="projects-content">
-            <!-- Landing page -->
+            
+            <!-- Online bookstore -->
             <div class="box">
-                <div class="image">
-                    <img src="projectsimg/img1.jpg" alt="lpage">
-                    <div class="overlay">
-                        <a href="#"><i class="fa-solid fa-code"></i>View code</a>
-                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i>View demo</a>
-                    </div>
-                </div>
-
+                <div class="image"><img src="projectsimg/project1.png" alt="lpage"></div>
                 <div class="info">
-                    <h2>Online bookstore</h2>
+                    <h2>Księgarnia online</h2>
                     <div class="technologies"><p>HTML</p><p>CSS</p><p>JS</p></div>
+                </div>
+                <div class="buttons">
+                    <a href="https://github.com/lis3q/Bookstore" target="_blank"><i class="fa-solid fa-code"></i>Zobacz kod</a>
+                    <a href="https://bookstorelisek.netlify.app/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i>Zobacz stronę</a>
                 </div>
             </div>
 
-            <!-- Landing page -->
+            <!-- Advanced To-Do App -->
             <div class="box">
-                <div class="image">
-                    <img src="projectsimg/img1.jpg" alt="lpage">
-                    <div class="overlay">
-                        <a href="#"><i class="fa-solid fa-code"></i>View code</a>
-                        <a href="#"><i class="fa-solid fa-up-right-from-square"></i>View demo</a>
-                    </div>
-                </div>
-
+                <div class="image"><img src="projectsimg/project2.png" alt="lpage"></div>
                 <div class="info">
-                    <h2>Landing page</h2>
-                    <div class="technologies"><p>HTML</p><p>CSS</p></div>
+                    <h2>Zaawansowana aplikacja To-Do</h2>
+                    <div class="technologies"><p>HTML</p><p>CSS</p><p>JS</p></div>
+                </div>
+                <div class="buttons">
+                    <a href="https://github.com/lis3q/Bookstore" target="_blank"><i class="fa-solid fa-code"></i>Zobacz kod</a>
+                    <a href="https://bookstorelisek.netlify.app/" target="_blank"><i class="fa-solid fa-up-right-from-square"></i>Zobacz stronę</a>
                 </div>
             </div>
 
@@ -131,29 +142,26 @@
     <!-- Contact section -->
     <section id="contact">
         <div class="heading">
-            <h1>Get in <span>Touch</span></h1>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus quaerat odio nulla nemo. Deserunt quaerat amet iste! Quos, excepturi officiis soluta fuga laborum quo maiores possimus saepe ea. Placeat, veritatis! Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            <h1>W <span>kontakcie</span></h1>
+            <p>Jeśli masz pytania, propozycje współpracy lub po prostu chcesz podzielić się pomysłem na projekt, jestem tu dla Ciebie. Moje drzwi są zawsze otwarte na nowe wyzwania i inspirujące rozmowy.</p>
             <hr>
         </div>
 
         <!-- Contact content -->
-        <div class="contact-content">
-            <input type="text" placeholder="Your first name">
-            <input type="text" placeholder="Your last Name">
-            <input type="email" placeholder="Your e-mail">
-            <textarea placeholder="Message" class="message"></textarea>
-            <input type="submit" value="Send me message">
-        </div>
+        <form action="mailto:lis3qx@gmail.com" method="post" enctype="text/plain" class="contact-content">
+            <input type="text" placeholder="Imię">
+            <input type="text" placeholder="Nazwisko">
+            <input type="email" placeholder="E-mail">
+            <textarea placeholder="Wiadomość" class="message"></textarea>
+            <input type="submit" value="Wyślij wiadomość">
+        </form>
     </section>
 
 
     <!-- Footer -->
     <footer>
-        <p>&copy; Copyright - Szymon 2023</p>
-        <div class="icons">
-            <a href="https://www.instagram.com/lis3q_/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
-            <a href="https://github.com/lis3q" target="_blank"><i class="fa-brands fa-github"></i></a>
-        </div>
+        <div class="logo"><h1><i class="fa-solid fa-code"></i> Szymon.</h1></div>
+        <p>&copy; 2023 Szymon Lisek</p>
     </footer>
 
     <script src="script.js"></script>

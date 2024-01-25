@@ -41,7 +41,7 @@ ScrollReveal({
 
 ScrollReveal().reveal('.heading', { delay: 400 });
 ScrollReveal().reveal('.about-content .image', { delay: 400, origin: 'left', distance: '6%' });
-ScrollReveal().reveal('.about-content .info', { delay: 400, origin: 'right', distance: '6%' });
+ScrollReveal().reveal('.about-content .about', { delay: 400, origin: 'right', distance: '6%' });
 ScrollReveal().reveal('.intro h2', { delay: 400, origin: 'right', distance: '6%' });
 ScrollReveal().reveal('.intro p', { delay: 500, origin: 'left', distance: '6%' });
 ScrollReveal().reveal('.intro .buttons', { delay: 600, origin: 'right', distance: '6%' });
