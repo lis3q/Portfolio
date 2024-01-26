@@ -253,7 +253,7 @@ nav .icons i {
     display: grid;
     grid-template-columns: 1fr 0fr;
     grid-gap: 1rem;
-    padding: 17% 10% 10.06% 10%;
+    padding: 12% 10% 10.06% 10%;
 }
 /* Home page content intro */
 .content .intro h2 {
@@ -266,7 +266,7 @@ nav .icons i {
 }
 .content .intro .mobile-img {
     display: none;
-    background: url(me.jpg);
+    background: url(img/me.jpg);
     height: 160px;
     width: 160px;
     border-radius: 50%;
@@ -317,7 +317,7 @@ nav .icons i {
 /* Home page content image */
 .content .image {
     position: absolute;
-    top: 16%;
+    top: 18%;
     right: 10%;
 }
 
@@ -333,9 +333,10 @@ nav .icons i {
     display: grid;
     align-items: center;
     grid-template-columns: repeat(2, 1fr);
+    gap: 45px;
 }
 #about .about-content .image img {
-    height: 800px;
+    height: 900px;
 }
 .about h1 {
     font-family: 'Roboto Condensed', sans-serif;
@@ -392,7 +393,7 @@ nav .icons i {
 
 
 #projects .projects-content .box {
-    margin: 7% 2%;
+    margin: 2%;
     width: 600px;
     height: 500px;
     background: var(--blue);
@@ -430,9 +431,6 @@ nav .icons i {
 }
 #projects .projects-content .box .buttons a:hover {
     background: var(--buttonhover);
-}
-#projects .projects-content .box .image .overlay a i {
-    margin-right: 15px;
 }
 #projects .projects-content .box .info h2 {
     color: var(--orange);
@@ -633,6 +631,7 @@ footer p {
         text-align: center;
     }
     .about ul {
+        margin-left: 0;
         list-style-type: none;
     }
     .about .download-cv-btn {
@@ -647,21 +646,26 @@ footer p {
     }
     #projects .projects-content {
         margin-top: 0%;
+        text-align: center;
     }
     #projects .projects-content .box {
         margin: 10% 2%;
         width: 100%;
         height: 100%;
     }
-    #projects .projects-content .box .image .overlay {
+    #projects .projects-content .box .buttons {
         flex-direction: column;
+        align-items: center;
+        gap: 5px;
     }
-    #projects .projects-content .box .image .overlay a {
-        font-size: 1em;
-        width: 60%;
-        height: 48px;
-        line-height: 48px;
-        margin: 3% 0;
+    #projects .projects-content .box .info .technologies {
+        justify-content: center;
+        margin-top: 7px;
+    }
+    #projects .box .buttons a {
+        margin: 0;
+        width: 100%;
+        justify-content: center;
     }
 
 

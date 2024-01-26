@@ -60,18 +60,6 @@ hamburger.addEventListener("click", () => {
 
 
 // Color themes 
-let white = document.querySelector(".themes .color.white");
-white.addEventListener("click", () => {
-    document.documentElement.style.setProperty('--darkblue', '#fff');
-    document.documentElement.style.setProperty('--white', '#1f1f1f');
-    document.documentElement.style.setProperty('--stickynav', '#f2f2f2');
-    document.documentElement.style.setProperty('--mobilenav', '#f5f5f5');
-    document.documentElement.style.setProperty('--blue', '#fafafa');
-    document.documentElement.style.setProperty('--buttonhover', '#ededed');
-    document.documentElement.style.setProperty('--button', '#1f1f1f');
-    document.documentElement.style.setProperty('--overlaybtn', '#fafafacb');
-})
-
 let black = document.querySelector(".themes .color.black");
 black.addEventListener("click", () => {
     document.documentElement.style.setProperty('--white', '#fff');
@@ -84,7 +72,6 @@ black.addEventListener("click", () => {
     document.documentElement.style.setProperty('--button', '#575757');
     document.documentElement.style.setProperty('--overlaybtn', '#292929cb');
 })
-
 
 let blue = document.querySelector(".themes .color.blue");
 blue.addEventListener("click", () => {
