@@ -58,9 +58,9 @@ export const Projects = () => {
 
                     {/* Project */}
                     <SwiperSlide className="bg-darkBg px-8 py-7 rounded-lg">
-                        <div className="image h-44 bg-white rounded-lg mb-4"><img src="img/projectsimg/project1.png" alt="project image"></img></div>
+                        <div className="image mb-6"><img src="img/projectsimg/project1.png" className="h-44 rounded-lg" alt="project image"></img></div>
                             <h1 className="text-white font-semibold text-3xl">Become a Front-End</h1>
-                            <p className="text-text font-light text-lg text-justify">Landing page z nowoczesnym designem i ilustracjami, którego zadaniem jest pomóc w zostaniu Front-End Developerem. Na stronie znajdziesz sekcje takie jak: strona główna, o nas, naucz się, recenzje i kontakt. Każda sekcja została starannie wykonana, a strona jest w pełni responsywna.</p>
+                            <p className="text-text font-light text-lg text-justify leading-6">Landing page z nowoczesnym designem i ilustracjami, którego zadaniem jest pomóc w zostaniu Front-End Developerem. Na stronie znajdziesz sekcje takie jak: strona główna, o nas, naucz się, recenzje i kontakt. Każda sekcja została starannie wykonana, a strona jest w pełni responsywna.</p>
                         <div className="technologies flex gap-2 font-semibold text-text text-lg mt-5">
                             <h3>ReactJS</h3> 
                             <span className="text-primary font-bold">•</span> 
@@ -74,9 +74,9 @@ export const Projects = () => {
 
                     {/* Project */}
                     <SwiperSlide className="bg-darkBg px-8 py-7 rounded-lg">
-                        <div className="image h-44 bg-white rounded-lg mb-4"><img src="img/projectsimg/project2.png" alt="project image"></img></div>
+                        <div className="image mb-6"><img src="img/projectsimg/project1.png" className="h-44 rounded-lg" alt="project image"></img></div>
                             <h1 className="text-white font-semibold text-3xl">Become a Front-End</h1>
-                            <p className="text-text font-light text-lg text-justify">Landing page z nowoczesnym designem i ilustracjami, którego zadaniem jest pomóc w zostaniu Front-End Developerem. Na stronie znajdziesz sekcje takie jak: strona główna, o nas, naucz się, recenzje i kontakt. Każda sekcja została starannie wykonana, a strona jest w pełni responsywna.</p>
+                            <p className="text-text font-light text-lg text-justify leading-6">Landing page z nowoczesnym designem i ilustracjami, którego zadaniem jest pomóc w zostaniu Front-End Developerem. Na stronie znajdziesz sekcje takie jak: strona główna, o nas, naucz się, recenzje i kontakt. Każda sekcja została starannie wykonana, a strona jest w pełni responsywna.</p>
                         <div className="technologies flex gap-2 font-semibold text-text text-lg mt-5">
                             <h3>ReactJS</h3> 
                             <span className="text-primary font-bold">•</span> 
@@ -90,9 +90,9 @@ export const Projects = () => {
 
                     {/* Project */}
                     <SwiperSlide className="bg-darkBg px-8 py-7 rounded-lg">
-                        <div className="image h-44 bg-white rounded-lg mb-4"><img src="img/projectsimg/project3.png" alt="project image"></img></div>
+                        <div className="image mb-6"><img src="img/projectsimg/project1.png" className="h-44 rounded-lg" alt="project image"></img></div>
                             <h1 className="text-white font-semibold text-3xl">Become a Front-End</h1>
-                            <p className="text-text font-light text-lg text-justify">Landing page z nowoczesnym designem i ilustracjami, którego zadaniem jest pomóc w zostaniu Front-End Developerem. Na stronie znajdziesz sekcje takie jak: strona główna, o nas, naucz się, recenzje i kontakt. Każda sekcja została starannie wykonana, a strona jest w pełni responsywna.</p>
+                            <p className="text-text font-light text-lg text-justify leading-6">Landing page z nowoczesnym designem i ilustracjami, którego zadaniem jest pomóc w zostaniu Front-End Developerem. Na stronie znajdziesz sekcje takie jak: strona główna, o nas, naucz się, recenzje i kontakt. Każda sekcja została starannie wykonana, a strona jest w pełni responsywna.</p>
                         <div className="technologies flex gap-2 font-semibold text-text text-lg mt-5">
                             <h3>ReactJS</h3> 
                             <span className="text-primary font-bold">•</span> 
@@ -106,9 +106,9 @@ export const Projects = () => {
 
                     {/* Project */}
                     <SwiperSlide className="bg-darkBg px-8 py-7 rounded-lg">
-                        <div className="image h-44 bg-white rounded-lg mb-4"><img src="img/projectsimg/project1.png" alt="project image"></img></div>
+                        <div className="image mb-6"><img src="img/projectsimg/project1.png" className="h-44 rounded-lg" alt="project image"></img></div>
                             <h1 className="text-white font-semibold text-3xl">Become a Front-End</h1>
-                            <p className="text-text font-light text-lg text-justify">Landing page z nowoczesnym designem i ilustracjami, którego zadaniem jest pomóc w zostaniu Front-End Developerem. Na stronie znajdziesz sekcje takie jak: strona główna, o nas, naucz się, recenzje i kontakt. Każda sekcja została starannie wykonana, a strona jest w pełni responsywna.</p>
+                            <p className="text-text font-light text-lg text-justify leading-6">Landing page z nowoczesnym designem i ilustracjami, którego zadaniem jest pomóc w zostaniu Front-End Developerem. Na stronie znajdziesz sekcje takie jak: strona główna, o nas, naucz się, recenzje i kontakt. Każda sekcja została starannie wykonana, a strona jest w pełni responsywna.</p>
                         <div className="technologies flex gap-2 font-semibold text-text text-lg mt-5">
                             <h3>ReactJS</h3> 
                             <span className="text-primary font-bold">•</span> 
@@ -122,9 +122,9 @@ export const Projects = () => {
 
                     {/* Project */}
                     <SwiperSlide className="bg-darkBg px-8 py-7 rounded-lg">
-                        <div className="image h-44 bg-white rounded-lg mb-4"><img src="img/projectsimg/project1.png" alt="project image"></img></div>
+                        <div className="image mb-6"><img src="img/projectsimg/project1.png" className="h-44 rounded-lg" alt="project image"></img></div>
                             <h1 className="text-white font-semibold text-3xl">Become a Front-End</h1>
-                            <p className="text-text font-light text-lg text-justify">Landing page z nowoczesnym designem i ilustracjami, którego zadaniem jest pomóc w zostaniu Front-End Developerem. Na stronie znajdziesz sekcje takie jak: strona główna, o nas, naucz się, recenzje i kontakt. Każda sekcja została starannie wykonana, a strona jest w pełni responsywna.</p>
+                            <p className="text-text font-light text-lg text-justify leading-6">Landing page z nowoczesnym designem i ilustracjami, którego zadaniem jest pomóc w zostaniu Front-End Developerem. Na stronie znajdziesz sekcje takie jak: strona główna, o nas, naucz się, recenzje i kontakt. Każda sekcja została starannie wykonana, a strona jest w pełni responsywna.</p>
                         <div className="technologies flex gap-2 font-semibold text-text text-lg mt-5">
                             <h3>ReactJS</h3> 
                             <span className="text-primary font-bold">•</span> 
