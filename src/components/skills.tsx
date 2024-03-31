@@ -9,12 +9,12 @@ export const Skills = () => {
             <div className="container mt-10 flex flex-col sm:flex-row justify-center items-center gap-12">
 
                 {/* Box */}
-                <div className="box flex flex-col gap-9 bg-lightBg rounded-lg px-9 py-6">
+                <div className="box flex flex-col gap-9 bg-lightBg rounded-lg px-9 py-6 w-full sm:w-auto">
                     <h1 className="text-primary font-bold text-center text-3xl">Front-End</h1>
 
                     {/* Cols */}
-                    <div className="cols flex flex-row gap-36">
-                        <div className="left flex flex-col gap-7">
+                    <div className="cols flex flex-row gap-20 sm:gap-36">
+                        <div className="left flex flex-col gap-5 sm:gap-7">
                             <div className="col">
                                 <div className="title flex gap-3 items-center">
                                     <i className="fa-regular fa-square-check text-xl text-primary"></i>
@@ -45,7 +45,7 @@ export const Skills = () => {
                             </div>
                         </div>
 
-                        <div className="right flex flex-col gap-7">
+                        <div className="right flex flex-col gap-5 sm:gap-7">
                             <div className="col">
                                 <div className="title flex gap-3 items-center">
                                     <i className="fa-regular fa-square-check text-xl text-primary"></i>
@@ -80,12 +80,12 @@ export const Skills = () => {
 
 
                 {/* Box */}
-                <div className="box flex flex-col gap-9 bg-lightBg rounded-lg px-9 py-6">
+                <div className="box flex flex-col gap-9 bg-lightBg rounded-lg px-9 py-6 w-full sm:w-auto">
                     <h1 className="text-primary font-bold text-center text-3xl">Narzędzia</h1>
 
                     {/* Cols */}
-                    <div className="cols flex flex-row gap-36">
-                            <div className="left flex flex-col gap-7">
+                    <div className="cols flex flex-row gap-20 sm:gap-36">
+                            <div className="left flex flex-col gap-5 sm:gap-7">
                                 <div className="col">
                                     <div className="title flex gap-3 items-center">
                                         <i className="fa-regular fa-square-check text-xl text-primary"></i>
@@ -116,7 +116,7 @@ export const Skills = () => {
                                 </div>
                             </div>
 
-                            <div className="right flex flex-col gap-7">
+                            <div className="right flex flex-col gap-5 sm:gap-7">
                                 <div className="col">
                                     <div className="title flex gap-3 items-center">
                                         <i className="fa-regular fa-square-check text-xl text-primary"></i>
