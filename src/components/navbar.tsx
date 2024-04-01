@@ -1,8 +1,8 @@
 import { useState } from "react";
 
 export const Navbar = () => {
-    const [Toggle, showMenu] = useState<boolean>(false);
     const [stickyNav, setStickyNav] = useState<boolean>(false);
+    const [mobileNav, setMobileNav] = useState<boolean>(true);
 
     const setSticky = () => {
         if (window.scrollY >= 90) {
@@ -23,13 +23,12 @@ export const Navbar = () => {
             </div>
 
             {/* Links */}
-            <div className={Toggle ? "links hidden" : "links text-text shadow-md translate-y-0 ease-in duration-200 gap-8 items-center z-30 bg-white rounded-lg px-3 py-8 sm:flex-row sm:gap-4 sm:relative top-32 fixed grid md:flex-row justify-center text-md sm:bg-nav sm:text-lg sm:top-0 sm:m-0 sm:px-0 sm:py-0 sm:flex sm:shadow-none"}>
-                <a href="#home" className="text-primary ease duration-200 hover:text-primary flex flex-col items-center"><i className="fa-solid fa-house block sm:hidden text-xl"></i> Strona główna</a>
-                <a href="#about" className="ease duration-200 hover:text-primary sm:hover:text-white flex flex-col items-center"><i className="fa-solid fa-user block sm:hidden text-xl"></i> O mnie</a>
-                <a href="#skills" className="ease duration-200 hover:text-primary sm:hover:text-white flex flex-col items-center"><i className="fa-solid fa-list block sm:hidden text-xl"></i> Co umiem?</a>
-                <a href="#projects" className="ease duration-200 hover:text-primary sm:hover:text-white flex flex-col items-center"><i className="fa-solid fa-folder block sm:hidden text-xl"></i>Projekty</a>
-                <a href="#contact" className="ease duration-200 hover:text-primary sm:hover:text-white flex flex-col items-center"><i className="fa-solid fa-phone-volume block sm:hidden text-xl"></i> Kontakt</a>
-                <a href="https://github.com/lis3q" target="_blank" className="text-md py-2 px-5 text-primary rounded-lg border-2 border-primary hover:text-white hover:bg-primary ease duration-200 block sm:hidden md:hidden">Mój GitHub</a>
+            <div className={"links text-text ease-in duration-200 gap-4 items-center flex-row justify-center text-lg hidden sm:flex"}>
+                <a href="#home" className="text-primary ease duration-200 hover:text-primary flex flex-col items-center">Strona główna</a>
+                <a href="#about" className="ease duration-200 hover:text-primary sm:hover:text-white flex flex-col items-center">O mnie</a>
+                <a href="#skills" className="ease duration-200 hover:text-primary sm:hover:text-white flex flex-col items-center">Co umiem?</a>
+                <a href="#projects" className="ease duration-200 hover:text-primary sm:hover:text-white flex flex-col items-center">Projekty</a>
+                <a href="#contact" className="ease duration-200 hover:text-primary sm:hover:text-white flex flex-col items-center">Kontakt</a>
             </div>
 
             {/* Button */}
@@ -38,8 +37,19 @@ export const Navbar = () => {
             </div>
 
             {/* Hamburger menu */}
-            <div onClick={() => showMenu(!Toggle)} className="hamburger-menu block md:hidden sm:hidden">
-                <i className="fa-solid fa-bars text-white text-3xl cursor-pointer"></i>
+            <div onClick={() => setMobileNav(!mobileNav)} className="hamburger-menu block md:hidden sm:hidden">
+                <i className={mobileNav ? "fa-solid fa-bars text-white text-3xl cursor-pointer" : "fa-solid fa-xmark text-white text-3xl cursor-pointer"}></i>
+            </div>
+
+
+            {/* Mobile menu */}
+            <div className={mobileNav ? "mobile-links fixed -top-96 left-1/2 transform -translate-x-1/2 -translate-y-24 ease duration-200" : "mobile-links fixed w-max top-48 left-1/2 transform -translate-x-1/2 -translate-y-24 grid grid-cols-2 z-30 bg-nav rounded-lg px-3 py-6 justify-between gap-7 ease duration-200"}>
+                <a href="#home" className="text-primary ease duration-200 hover:text-primary flex flex-col items-center"><i className="fa-solid fa-house block text-xl"></i> Strona główna</a>
+                <a href="#about" className="ease duration-200 hover:text-primary text-text flex flex-col items-center"><i className="fa-solid fa-user block text-xl"></i> O mnie</a>
+                <a href="#skills" className="ease duration-200 hover:text-primary text-text flex flex-col items-center"><i className="fa-solid fa-list block text-xl"></i> Co umiem?</a>
+                <a href="#projects" className="ease duration-200 hover:text-primary text-text flex flex-col items-center"><i className="fa-solid fa-folder block text-xl"></i>Projekty</a>
+                <a href="#contact" className="ease duration-200 hover:text-primary text-text flex flex-col items-center"><i className="fa-solid fa-phone-volume block text-xl"></i> Kontakt</a>
+                <a href="https://github.com/lis3q" target="_blank" className="text-md px-5 py-3 text-primary rounded-lg border-2 border-primary hover:text-white hover:bg-primary ease duration-200">Mój GitHub</a>
             </div>
         </nav>
     )

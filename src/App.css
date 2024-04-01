@@ -7,6 +7,14 @@
 
 html { scroll-behavior: smooth; scroll-padding-top: 70px; }
 
+::-webkit-scrollbar {
+    background: #36363a;
+    width: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #FF9900;
+}
+
 nav.active {
     padding: 16px 40px;
     box-shadow: 2px 0 12px 1px #31313526;

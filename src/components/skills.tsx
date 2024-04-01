@@ -20,28 +20,28 @@ export const Skills = () => {
                                     <i className="fa-regular fa-square-check text-xl text-primary hidden sm:flex"></i>
                                     <h2 className="font-medium text-2xl text-white">HTML</h2>
                                 </div>
-                                <div className="level text-text font-regular text-md sm:text-lg -mt-1">Zaawansowany</div>
+                                <div className="level text-text font-regular text-sm sm:text-lg -mt-1">Zaawansowany</div>
                             </div>
                             <div className="col">
                                 <div className="title flex gap-3 items-center">
                                     <i className="fa-regular fa-square-check text-xl text-primary hidden sm:flex"></i>
                                     <h2 className="font-medium text-2xl text-white">CSS</h2>
                                 </div>
-                                <div className="level text-text font-regular text-md sm:text-lg -mt-1">Zaawansowany</div>
+                                <div className="level text-text font-regular text-sm sm:text-lg -mt-1">Zaawansowany</div>
                             </div>
                             <div className="col">
                                 <div className="title flex gap-3 items-center">
                                     <i className="fa-regular fa-square-check text-xl text-primary hidden sm:flex"></i>
                                     <h2 className="font-medium text-2xl text-white">JavaScript</h2>
                                 </div>
-                                <div className="level text-text font-regular text-md sm:text-lg -mt-1">Zaawansowany</div>
+                                <div className="level text-text font-regular text-sm sm:text-lg -mt-1">Zaawansowany</div>
                             </div>
                             <div className="col">
                                 <div className="title flex gap-3 items-center">
                                     <i className="fa-regular fa-square-check text-xl text-primary hidden sm:flex"></i>
                                     <h2 className="font-medium text-2xl text-white">Bootstrap</h2>
                                 </div>
-                                <div className="level text-text font-regular text-md sm:text-lg -mt-1">Początkujący</div>
+                                <div className="level text-text font-regular text-sm sm:text-lg -mt-1">Początkujący</div>
                             </div>
                         </div>
 
@@ -51,28 +51,28 @@ export const Skills = () => {
                                     <i className="fa-regular fa-square-check text-xl text-primary hidden sm:flex"></i>
                                     <h2 className="font-medium text-2xl text-white">React</h2>
                                 </div>
-                                <div className="level text-text font-regular text-md sm:text-lg -mt-1">Zaawansowany</div>
+                                <div className="level text-text font-regular text-sm sm:text-lg -mt-1">Zaawansowany</div>
                             </div>
                             <div className="col">
                                 <div className="title flex gap-3 items-center">
                                     <i className="fa-regular fa-square-check text-xl text-primary hidden sm:flex"></i>
                                     <h2 className="font-medium text-2xl text-white">jQuery</h2>
                                 </div>
-                                <div className="level text-text font-regular text-md sm:text-lg -mt-1">Zaawansowany</div>
+                                <div className="level text-text font-regular text-sm sm:text-lg -mt-1">Zaawansowany</div>
                             </div>
                             <div className="col">
                                 <div className="title flex gap-3 items-center">
                                     <i className="fa-regular fa-square-check text-xl text-primary hidden sm:flex"></i>
                                     <h2 className="font-medium text-2xl text-white">Saas</h2>
                                 </div>
-                                <div className="level text-text font-regular text-md sm:text-lg -mt-1">Początkujacy</div>
+                                <div className="level text-text font-regular text-sm sm:text-lg -mt-1">Początkujacy</div>
                             </div>
                             <div className="col">
                                 <div className="title flex gap-3 items-center">
                                     <i className="fa-regular fa-square-check text-xl text-primary hidden sm:flex"></i>
                                     <h2 className="font-medium text-2xl text-white">TypeScript</h2>
                                 </div>
-                                <div className="level text-text font-regular text-md sm:text-lg -mt-1">Początkujący</div>
+                                <div className="level text-text font-regular text-sm sm:text-lg -mt-1">Początkujący</div>
                             </div>
                         </div>
                     </div>
@@ -91,28 +91,28 @@ export const Skills = () => {
                                         <i className="fa-regular fa-square-check text-xl text-primary hidden sm:flex"></i>
                                         <h2 className="font-medium text-2xl text-white">Figma</h2>
                                     </div>
-                                    <div className="level text-text font-regular text-md sm:text-lg -mt-1">Zaawansowany</div>
+                                    <div className="level text-text font-regular text-sm sm:text-lg -mt-1">Zaawansowany</div>
                                 </div>
                                 <div className="col">
                                     <div className="title flex gap-3 items-center">
                                         <i className="fa-regular fa-square-check text-xl text-primary hidden sm:flex"></i>
                                         <h2 className="font-medium text-2xl text-white">GIMP</h2>
                                     </div>
-                                    <div className="level text-text font-regular text-lg -mt-1">Zaawansowany</div>
+                                    <div className="level text-text font-regular text-sm -mt-1">Zaawansowany</div>
                                 </div>
                                 <div className="col">
                                     <div className="title flex gap-3 items-center">
                                         <i className="fa-regular fa-square-check text-xl text-primary hidden sm:flex"></i>
                                         <h2 className="font-medium text-2xl text-white">VS Code</h2>
                                     </div>
-                                    <div className="level text-text font-regular text-lg -mt-1">Zaawansowany</div>
+                                    <div className="level text-text font-regular text-sm -mt-1">Zaawansowany</div>
                                 </div>
                                 <div className="col">
                                     <div className="title flex gap-3 items-center">
                                         <i className="fa-regular fa-square-check text-xl text-primary hidden sm:flex"></i>
                                         <h2 className="font-medium text-2xl text-white">Git</h2>
                                     </div>
-                                    <div className="level text-text font-regular text-lg -mt-1">Zaawansowany</div>
+                                    <div className="level text-text font-regular text-sm -mt-1">Zaawansowany</div>
                                 </div>
                             </div>
 
@@ -122,28 +122,28 @@ export const Skills = () => {
                                         <i className="fa-regular fa-square-check text-xl text-primary hidden sm:flex"></i>
                                         <h2 className="font-medium text-2xl text-white">NPM</h2>
                                     </div>
-                                    <div className="level text-text font-regular text-md sm:text-lg -mt-1">Zaawansowany</div>
+                                    <div className="level text-text font-regular text-sm sm:text-lg -mt-1">Zaawansowany</div>
                                 </div>
                                 <div className="col">
                                     <div className="title flex gap-3 items-center">
                                         <i className="fa-regular fa-square-check text-xl text-primary hidden sm:flex"></i>
                                         <h2 className="font-medium text-2xl text-white">FireBase</h2>
                                     </div>
-                                    <div className="level text-text font-regular text-md sm:text-lg -mt-1">Początkujący</div>
+                                    <div className="level text-text font-regular text-sm sm:text-lg -mt-1">Początkujący</div>
                                 </div>
                                 <div className="col">
                                     <div className="title flex gap-3 items-center">
                                         <i className="fa-regular fa-square-check text-xl text-primary hidden sm:flex"></i>
                                         <h2 className="font-medium text-2xl text-white">Tailwind</h2>
                                     </div>
-                                    <div className="level text-text font-regular text-md sm:text-lg -mt-1">Zaawansowany</div>
+                                    <div className="level text-text font-regular text-sm sm:text-lg -mt-1">Zaawansowany</div>
                                 </div>
                                 <div className="col">
                                     <div className="title flex gap-3 items-center">
                                         <i className="fa-regular fa-square-check text-xl text-primary hidden sm:flex"></i>
                                         <h2 className="font-medium text-2xl text-white">GitHub</h2>
                                     </div>
-                                    <div className="level text-text font-regular text-md sm:text-lg -mt-1">Początkujący</div>
+                                    <div className="level text-text font-regular text-sm sm:text-lg -mt-1">Początkujący</div>
                                 </div>
                             </div>
                     </div>
