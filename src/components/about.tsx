@@ -3,7 +3,7 @@ export const About = () => {
         <section className="about px-5 py-6 sm:py-16 sm:px-10 bg-lightBg" id="about">
 
             {/* Heading */}
-            <div className="heading text-2xl text-white font-semibold">O mnie</div>
+            <div className="heading text-xl sm:text-2xl text-white font-semibold">O mnie</div>
 
             {/* Container */}
             <div className="container mt-10 grid sm:grid-cols-2 grid-cols-1 gap-7 sm:gap-0">
@@ -15,8 +15,8 @@ export const About = () => {
                 <div className="content">
 
                     {/* Text */}
-                    <h1 className="text-white font-bold text-4xl">Jestem pasjonatem Front-Endu</h1>
-                    <p className="text-text font-regular text-justify mt-2 sm:text-xl text-lg">który czerpie radość z tworzenia inspirujących i funkcjonalnych stron internetowych. Moje podejście opiera się na kombinacji kreatywności i precyzji kodowania, co sprawia, że każdy projekt staje się dla mnie unikalnym wyzwaniem do pokonania. Zdobyłem doświadczenie w projektach różnorodnych pod względem skali i złożoności, zawsze dążąc do doskonałości w każdym detalu. Chętnie przyjmuję nowe wyzwania, gotów do eksplorowania nowych technologii i doskonalenia swoich umiejętności.</p>
+                    <h1 className="text-white font-bold text-3xl sm:text-4xl">Jestem pasjonatem Front-Endu</h1>
+                    <p className="text-text font-regular sm:text-justify text-left  mt-2 sm:text-xl text-lg">który czerpie radość z tworzenia inspirujących i funkcjonalnych stron internetowych.<br></br><br></br>Moje podejście opiera się na kombinacji <b>kreatywności</b> i <b>precyzji</b> kodowania, co sprawia, że każdy projekt staje się dla mnie unikalnym wyzwaniem do pokonania.<br></br><br></br> Zdobyłem doświadczenie w projektach różnorodnych pod względem skali i złożoności, zawsze dążąc do <b>doskonałości</b> w każdym detalu.<br></br><br></br> Chętnie przyjmuję nowe <b>wyzwania</b>, gotów do eksplorowania nowych technologii i <b>doskonalenia</b> swoich umiejętności.</p>
 
                     {/* Buttons */}
                     <div className="buttons flex flex-row justify-start items-start mt-5 gap-4">

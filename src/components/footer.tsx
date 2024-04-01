@@ -12,7 +12,7 @@ export const Footer = () => {
                 </div>
 
                 {/* Section links */}
-                <div className="links flex gap-4">
+                <div className="links flex sm:flex-row flex-col text-center gap-4">
                     <a href="#home" className="text-text text-lg ease duration-200 hover:text-primary">Strona główna</a>
                     <a href="#about" className="text-text text-lg ease duration-200 hover:text-primary">O mnie</a>
                     <a href="#skills" className="text-text text-lg ease duration-200 hover:text-primary">Co umiem?</a>
