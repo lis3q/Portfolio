@@ -6,7 +6,7 @@ export const Contact = () => {
             <div className="heading text-xl sm:text-2xl text-white font-semibold">Zostańmy w kontakcie</div>
 
             {/* Container */}
-            <div className="container mt-10 text-center">
+            <div className="container mt-10 text-center mx-auto">
                 <div className="intro">
                     <h1 className="text-white text-3xl sm:text-4xl font-bold">Stwórzmy <span className="text-primary">razem</span> projekt!</h1>
                     <p className="text-text font-medium text-md sm:text-xl text-center mx-auto my-1 w-full sm:w-1/2">Jestem gotowy na współpracę nad interesującymi projektami. Jeśli masz pomysł lub potrzebujesz wsparcia w realizacji projektu, chętnie dołączę do zespołu. Skontaktuj się ze mną, abyśmy mogli zacząć tworzyć razem!</p>

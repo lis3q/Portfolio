@@ -6,7 +6,7 @@ export const About = () => {
             <div className="heading text-xl sm:text-2xl text-white font-semibold">O mnie</div>
 
             {/* Container */}
-            <div className="container mt-10 grid sm:grid-cols-2 grid-cols-1 gap-7 sm:gap-0">
+            <div className="container mt-10 grid sm:grid-cols-2 grid-cols-1 gap-7 sm:gap-0 mx-auto">
 
                 {/* Image */}
                 <div className="image"><img src="img/img.jpg" className="h-96 w-96 object-cover rounded-lg" alt="me"></img></div>

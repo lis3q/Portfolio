@@ -1,12 +1,18 @@
+import { motion } from "framer-motion";
+
 export const Skills = () => {
     return (
-        <section className="skills px-5 py-6 sm:py-16 sm:px-10 bg-darkBg" id="skills">
+        <motion.section 
+        initial={{ opacity: 0, y: -50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="skills px-5 py-6 sm:py-16 sm:px-10 bg-darkBg" id="skills">
 
             {/* Heading */}
             <div className="heading text-xl sm:text-2xl text-white font-semibold">Moje umiejętności</div>
 
             {/* Container */}
-            <div className="container mt-10 flex flex-col sm:flex-row justify-center items-center gap-12">
+            <div className="container mt-10 flex flex-col sm:flex-row justify-center items-center gap-12 mx-auto">
 
                 {/* Box */}
                 <div className="box flex flex-col gap-9 bg-lightBg rounded-lg px-4 sm:px-9 py-6 w-full sm:w-auto">
@@ -98,21 +104,21 @@ export const Skills = () => {
                                         <i className="fa-regular fa-square-check text-xl text-primary hidden sm:flex"></i>
                                         <h2 className="font-medium text-2xl text-white">GIMP</h2>
                                     </div>
-                                    <div className="level text-text font-regular text-sm -mt-1">Zaawansowany</div>
+                                    <div className="level text-text font-regular text-sm sm:text-lg -mt-1">Zaawansowany</div>
                                 </div>
                                 <div className="col">
                                     <div className="title flex gap-3 items-center">
                                         <i className="fa-regular fa-square-check text-xl text-primary hidden sm:flex"></i>
                                         <h2 className="font-medium text-2xl text-white">VS Code</h2>
                                     </div>
-                                    <div className="level text-text font-regular text-sm -mt-1">Zaawansowany</div>
+                                    <div className="level text-text font-regular text-sm sm:text-lg -mt-1">Zaawansowany</div>
                                 </div>
                                 <div className="col">
                                     <div className="title flex gap-3 items-center">
                                         <i className="fa-regular fa-square-check text-xl text-primary hidden sm:flex"></i>
                                         <h2 className="font-medium text-2xl text-white">Git</h2>
                                     </div>
-                                    <div className="level text-text font-regular text-sm -mt-1">Zaawansowany</div>
+                                    <div className="level text-text font-regular text-sm sm:text-lg -mt-1">Zaawansowany</div>
                                 </div>
                             </div>
 
@@ -151,6 +157,10 @@ export const Skills = () => {
                 </div>
             </div>
 
-        </section>
+        </motion.section>
     )
+}
+
+function componentDidMount() {
+    throw new Error('Function not implemented.');
 }

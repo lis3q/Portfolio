@@ -3,7 +3,7 @@ export const Footer = () => {
         <footer className="footer px-5 py-6 sm:py-10 sm:px-10 bg-lightBg">
 
             {/* Container */}
-            <div className="container flex flex-col justify-center items-center gap-6">
+            <div className="container flex flex-col justify-center items-center gap-6 mx-auto">
 
                 {/* Logo */}
                 <div className="logo flex gap-4 items-center">

@@ -1,6 +1,6 @@
 export const Hero = () => {
     return (
-        <div className="hero bg-darkBg px-5 py-6 flex flex-col-reverse justify-between items-center sm:flex-row sm:py-16 sm:px-10 h-full sm:h-screen pt-32 sm:pt-60">
+        <div className="hero bg-darkBg mx-auto px-5 py-6 flex flex-col-reverse justify-between items-center sm:flex-row sm:py-16 sm:px-10 h-full sm:h-screen pt-32 sm:pt-60">
             <div className="content">
                 <h2 className="text-white text-3xl text-center mt-6 font-medium sm:text-3xl sm:text-left sm:mt-0">Cześć tu <span className="text-primary">Szymon</span></h2>
                 <h1 className="text-white text-3xl text-center font-bold mt-1 sm:text-5xl sm:text-left">Front-End Developer</h1>

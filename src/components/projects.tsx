@@ -27,15 +27,7 @@ export const Projects = () => {
             <div className="heading text-xl sm:text-2xl text-white font-semibold">Moje projekty</div>
 
             {/* Container */}
-            <div className="container mt-10 flex flex-col gap-16 justify-center items-center">
-
-                {/* Filters */}
-                <div className="filters hidden gap-5 sm:flex sm:gap-2">
-                    <button className="w-max h-10 px-6 py-2 text-white text-center font-bold bg-primary rounded-lg">Wszystko</button>
-                    <button className="w-max h-10 px-6 py-2  text-center text-white font-bold rounded-lg hover:bg-darkBg">Landing page</button>
-                    <button className="w-max h-10 px-6 py-2  text-center text-white font-bold rounded-lg hover:bg-darkBg">E-Commerce</button>
-                    <button className="w-max h-10 px-6 py-2  text-center text-white font-bold rounded-lg hover:bg-darkBg">Aplikacje</button>
-                </div>
+            <div className="container mt-10 flex flex-col gap-16 justify-center items-center mx-auto">
 
                 {/* Projects */}
                 <Swiper 
