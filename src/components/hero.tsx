@@ -12,7 +12,7 @@ export const Hero = () => {
             </div>
 
             <div className="image">
-                <img src="img/me.jpg" alt="me" className="pl-4 pt-2 pr-2 pb-4 rounded-lg bg-primary"></img>
+                <img src="img/me.jpg" alt="me" className="pl-4 pt-2 pr-2 pb-4 h-96 rounded-lg bg-primary"></img>
             </div>
         </div>
     )
