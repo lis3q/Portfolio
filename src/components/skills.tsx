@@ -2,20 +2,26 @@ import { motion } from "framer-motion";
 
 export const Skills = () => {
     return (
-        <motion.section 
-        initial={{ opacity: 0, y: -50 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
-        className="skills px-5 py-6 sm:py-16 sm:px-10 bg-darkBg" id="skills">
+        <section className="skills px-5 py-6 sm:py-16 sm:px-10 bg-darkBg" id="skills">
 
             {/* Heading */}
-            <div className="heading text-xl sm:text-2xl text-white font-semibold">Moje umiejętności</div>
+            <motion.div 
+                initial={{ opacity: 0, x: -120 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.3, duration: 0.3 }}
+                className="heading text-xl sm:text-2xl text-white font-semibold">Moje umiejętności
+            </motion.div>
 
             {/* Container */}
             <div className="container mt-10 flex flex-col sm:flex-row justify-center items-center gap-12 mx-auto">
 
                 {/* Box */}
-                <div className="box flex flex-col gap-9 bg-lightBg rounded-lg px-4 sm:px-9 py-6 w-full sm:w-auto">
+                <motion.div 
+                    initial={{ opacity: 0, x: -100}}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.1, duration: 0.4 }}
+                    className="box flex flex-col gap-9 bg-lightBg rounded-lg px-4 sm:px-9 py-6 w-full sm:w-auto">
+
                     <h1 className="text-primary font-bold text-center text-3xl">Front-End</h1>
 
                     {/* Cols */}
@@ -82,11 +88,16 @@ export const Skills = () => {
                             </div>
                         </div>
                     </div>
-                </div>
+                </motion.div>
 
 
                 {/* Box */}
-                <div className="box flex flex-col gap-9 bg-lightBg rounded-lg px-4 sm:px-9 py-6 w-full sm:w-auto">
+                <motion.div 
+                    initial={{ opacity: 0, x: 100}}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.1, duration: 0.4 }}
+                    className="box flex flex-col gap-9 bg-lightBg rounded-lg px-4 sm:px-9 py-6 w-full sm:w-auto">
+
                     <h1 className="text-primary font-bold text-center text-3xl">Narzędzia</h1>
 
                     {/* Cols */}
@@ -154,13 +165,9 @@ export const Skills = () => {
                             </div>
                     </div>
 
-                </div>
+                </motion.div>
             </div>
 
-        </motion.section>
+        </section>
     )
-}
-
-function componentDidMount() {
-    throw new Error('Function not implemented.');
 }

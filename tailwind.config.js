@@ -14,6 +14,9 @@ module.exports = {
     },
     fontFamily: {
       sans: ["Jost", "sans-serif"],
+    },
+    backgroundImage: {
+      'primary-gradient': 'linear-gradient(#FF9900, #FF9900)'
     }
   },
 }

@@ -1,4 +1,5 @@
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
+import { motion } from 'framer-motion';
 
 import 'swiper/css';
 import 'swiper/css/navigation';
@@ -24,10 +25,19 @@ export const Projects = () => {
         <section className="projects px-5 py-6 sm:py-16 sm:px-10 bg-lightBg" id="projects">
 
             {/* Heading */}
-            <div className="heading text-xl sm:text-2xl text-white font-semibold">Moje projekty</div>
+            <motion.div 
+                initial={{ opacity: 0, x: -120 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.3, duration: 0.3 }}
+                className="heading text-xl sm:text-2xl text-white font-semibold">Moje projekty
+            </motion.div>
 
             {/* Container */}
-            <div className="container mt-10 flex flex-col gap-16 justify-center items-center mx-auto">
+            <motion.div 
+                initial={{ opacity: 0, y: 140}}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ delay: 0.1, duration: 0.4 }}
+                className="container mt-10 flex flex-col gap-16 justify-center items-center mx-auto">
 
                 {/* Projects */}
                 <Swiper 
@@ -150,7 +160,7 @@ export const Projects = () => {
 
                 </Swiper>
 
-            </div>
+            </motion.div>
 
         </section>
     )

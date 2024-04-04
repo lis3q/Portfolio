@@ -5,7 +5,7 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
-html { scroll-behavior: smooth; scroll-padding-top: 70px; }
+html { scroll-behavior: smooth; scroll-padding-top: 70px; overflow-x: hidden }
 
 ::-webkit-scrollbar {
     background: #36363a;

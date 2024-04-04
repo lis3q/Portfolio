@@ -1,18 +1,37 @@
+import { motion } from "framer-motion"
+
+
 export const About = () => {
     return (
         <section className="about px-5 py-6 sm:py-16 sm:px-10 bg-lightBg" id="about">
 
             {/* Heading */}
-            <div className="heading text-xl sm:text-2xl text-white font-semibold">O mnie</div>
+            <motion.div 
+                initial={{ opacity: 0, x: -120 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ delay: 0.3, duration: 0.3 }}
+                className="heading text-xl sm:text-2xl text-white font-semibold">O mnie
+            </motion.div>
 
             {/* Container */}
             <div className="container mt-10 grid sm:grid-cols-2 grid-cols-1 gap-7 sm:gap-0 mx-auto">
 
                 {/* Image */}
-                <div className="image"><img src="img/img.jpg" className="h-96 w-96 object-cover rounded-lg" alt="me"></img></div>
+                <motion.div
+                    initial={{ opacity: 0, x: -100 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.1, duration: 0.4 }}
+                    className="image">
+                    <img src="img/img.jpg" className="h-96 w-96 object-cover rounded-lg" alt="me"></img>
+                </motion.div>
 
                 {/* Content */}
-                <div className="content">
+                <motion.div 
+                    initial={{ opacity: 0, x: 100 }} 
+                    whileInView={{ opacity: 1, x: 0 }}
+                    transition={{ delay: 0.1, duration: 0.4 }}
+                    className="content"
+                >
 
                     {/* Text */}
                     <h1 className="text-white font-bold text-3xl sm:text-4xl">Jestem pasjonatem Front-Endu</h1>
@@ -20,7 +39,7 @@ export const About = () => {
 
                     {/* Buttons */}
                     <div className="buttons flex flex-col sm:flex-row justify-start items-start mt-5 gap-4">
-                        <a href="#about" className="text-primary border-2 text-lg rounded-lg py-2 flex items-center gap-3 border-primary ease duration-200 hover:text-white hover:bg-primary sm:px-8 sm:py-3 sm:text-lg w-48 px-4 sm:w-auto"><i className="fa-solid fa-folder"></i> Zobacz projekty</a>
+                        <a href="#projects" className="text-primary border-2 text-lg rounded-lg py-2 flex items-center gap-3 border-primary bg-no-repeat bg-[length:0_100%] bg-primary-gradient ease duration-300 hover:bg-[length:100%_100%] hover:text-white sm:px-8 sm:py-3 sm:text-lg w-48 px-4 sm:w-auto"><i className="fa-solid fa-folder"></i> Zobacz projekty</a>
                         <a href="#about" className="text-white border-2 text-lg rounded-lg py-2 flex items-center gap-3 border-primary bg-primary sm:px-8 sm:py-3 sm:text-lg w-48 sm:w-auto px-4"><i className="fa-solid fa-briefcase"></i> Pobierz CV</a>
                     </div>
 
@@ -31,7 +50,7 @@ export const About = () => {
                         <a href="https://github.com/lis3q"><i className="fa-brands fa-github cursor-pointer hover:text-primary hover:-translate-y-1 ease duration-200"></i></a>
                     </div>
 
-                </div>
+                </motion.div>
             </div>
         </section>
     )
