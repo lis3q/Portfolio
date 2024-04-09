@@ -2,15 +2,15 @@ import { useForm } from "react-hook-form";
 import * as yup from 'yup';
 import { yupResolver } from "@hookform/resolvers/yup";
 import { motion } from "framer-motion";
+import { useRef } from "react";
+import emailjs from '@emailjs/browser';
 
 export const Contact = () => {
-
     // Form validation
     const schema = yup.object().shape({
         firstName: yup.string().required("To pole jest wymagane"),
         lastName: yup.string().required("To pole jest wymagane"),
         email: yup.string().email("To nie wygląda na poprawny adres e-mail").required("To pole jest wymagane"),
-        phoneNr: yup.string().notRequired().typeError(""),
         message: yup.string().required("To pole jest wymagane").min(10, "Wymagane minimum 10 znaków")
     })
 
@@ -18,9 +18,27 @@ export const Contact = () => {
         resolver: yupResolver(schema)
     });
 
-    const onSubmitHandler = () => {
-        reset();
+    // Sending email with EmailJS
+    const form = useRef<HTMLFormElement>(null);
+
+    const sendEmail = (e: object) => {
+        if (form.current) {
+            emailjs.sendForm('service_kthim4f', 'template_xk6yhpl', form.current, {
+                publicKey: 'L1nGhYYZjrJsFZz2s',
+            })
+            .then((response) => {
+                console.log('Email sent successfully:', response);
+                reset();
+            })
+            .catch((error) => {
+                console.error('Email sending failed:', error);
+            });
+        };
     }
+
+      const onSubmit = (data: object) => {
+        sendEmail(data);
+      }
 
 
     return (
@@ -51,17 +69,17 @@ export const Contact = () => {
                     initial={{ opacity: 0, y: -120}}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1, duration: 0.4 }}
-                    onSubmit={handleSubmit(onSubmitHandler)} className="form flex flex-col gap-4 items-center mt-10">
+                    ref={form}
+                    onSubmit={handleSubmit(onSubmit)} 
+                    className="form flex flex-col gap-4 items-center mt-10">
 
-                    <input {...register("firstName")} type="text" maxLength={57} placeholder="*Imię" className="text-white outline-none w-full sm:w-1/3 bg-inherit px-4 text-lg py-2 rounded-lg border-2 border-white placeholder-text"></input>
+                    <input {...register("firstName")} type="text" maxLength={57} name="user_name" placeholder="*Imię" className="text-white outline-none w-full sm:w-1/3 bg-inherit px-4 text-lg py-2 rounded-lg border-2 border-white placeholder-text"></input>
                     <p className="text-red font-regular text-md sm:text-lg -mt-4">{errors.firstName?.message}</p>
-                    <input {...register("lastName")} type="text" maxLength={35} placeholder="*Nazwisko" className="text-white outline-none w-full sm:w-1/3 bg-inherit px-4 text-lg py-2 rounded-lg border-2 border-white placeholder-text"></input>
+                    <input {...register("lastName")} type="text" name="user_surname" maxLength={35} placeholder="*Nazwisko" className="text-white outline-none w-full sm:w-1/3 bg-inherit px-4 text-lg py-2 rounded-lg border-2 border-white placeholder-text"></input>
                     <p className="text-red font-regular text-md sm:text-lg -mt-4">{errors.lastName?.message}</p>
-                    <input {...register("email")} type="text" placeholder="*E-mail" className="text-white outline-none w-full sm:w-1/3 bg-inherit px-4 text-lg py-2 rounded-lg border-2 border-white placeholder-text"></input>
+                    <input {...register("email")} type="text" placeholder="*E-mail" name="user_email" className="text-white outline-none w-full sm:w-1/3 bg-inherit px-4 text-lg py-2 rounded-lg border-2 border-white placeholder-text"></input>
                     <p className="text-red font-regular text-md sm:text-lg -mt-4">{errors.email?.message}</p>
-                    <input {...register("phoneNr")} type="text" placeholder="Nr. tel" maxLength={15} className="text-white outline-none w-full sm:w-1/3 bg-inherit px-4 text-lg py-2 rounded-lg border-2 border-white placeholder-text"></input>
-                    <p className="text-red font-regular text-md sm:text-lg -mt-4">{errors.phoneNr?.message}</p>
-                    <textarea {...register("message")} placeholder="*Wiadomość" maxLength={800} className="text-white outline-none w-full resize-none sm:w-1/3 bg-inherit h-80 px-4 text-lg py-4 rounded-lg border-2 border-white placeholder-text"></textarea>
+                    <textarea {...register("message")} placeholder="*Wiadomość" name="message" maxLength={800} className="text-white outline-none w-full resize-none sm:w-1/3 bg-inherit h-80 px-4 text-lg py-4 rounded-lg border-2 border-white placeholder-text"></textarea>
                     <p className="text-red font-regular text-md sm:text-lg -mt-4">{errors.message?.message}</p>
                     <input type="submit" value="Wyślij wiadomość" className="text-white w-full sm:w-1/3 bg-primary font-bold px-4 text-lg sm:text-xl py-4 rounded-lg cursor-pointer opacity-75 hover:opacity-100 ease duration-200"></input>
                 </motion.form>

@@ -21,11 +21,11 @@ export const Hero = () => {
 
             <motion.div 
                 initial={{ opacity: 0, x: 40 }}
-                whileInView={{ opacity: 1, x: -100 }}
+                whileInView={{ opacity: 1, x: 0 }}
                 transition={{ delay: 0.1, duration: 0.3 }}
                 className="image">
 
-                <img src="img/me.jpg" alt="me" className="pl-4 pt-2 pr-2 pb-4 h-1/3 w-full rounded-lg bg-primary"></img>
+                <img src="img/me.jpg" alt="me" className="pl-4 pt-2 pr-2 pb-4 h-96 w-auto rounded-lg bg-primary"></img>
             </motion.div>
         </div>
     )

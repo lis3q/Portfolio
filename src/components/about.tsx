@@ -38,9 +38,9 @@ export const About = () => {
                     <p className="text-text font-regular sm:text-justify text-left  mt-2 sm:text-xl text-lg">który czerpie radość z tworzenia inspirujących i funkcjonalnych stron internetowych.<br></br><br></br>Moje podejście opiera się na kombinacji <b>kreatywności</b> i <b>precyzji</b> kodowania, co sprawia, że każdy projekt staje się dla mnie unikalnym wyzwaniem do pokonania.<br></br><br></br> Zdobyłem doświadczenie w projektach różnorodnych pod względem skali i złożoności, zawsze dążąc do <b>doskonałości</b> w każdym detalu.<br></br><br></br> Chętnie przyjmuję nowe <b>wyzwania</b>, gotów do eksplorowania nowych technologii i <b>doskonalenia</b> swoich umiejętności.</p>
 
                     {/* Buttons */}
-                    <div className="buttons flex flex-col sm:flex-row justify-start items-start mt-5 gap-4">
-                        <a href="#projects" className="text-primary border-2 text-lg rounded-lg py-2 flex items-center gap-3 border-primary bg-no-repeat bg-[length:0_100%] bg-primary-gradient ease duration-300 hover:bg-[length:100%_100%] hover:text-white sm:px-8 sm:py-3 sm:text-lg w-48 px-4 sm:w-auto"><i className="fa-solid fa-folder"></i> Zobacz projekty</a>
-                        <a href="#about" className="text-white border-2 text-lg rounded-lg py-2 flex items-center gap-3 border-primary bg-primary sm:px-8 sm:py-3 sm:text-lg w-48 sm:w-auto px-4"><i className="fa-solid fa-briefcase"></i> Pobierz CV</a>
+                    <div className="buttons flex flex-col sm:flex-row justify-start items-start mt-5 gap-4 text-center">
+                        <a href="#projects" className="text-primary border-2 text-lg rounded-lg py-2 flex items-center gap-3 border-primary bg-no-repeat justify-center bg-[length:0_100%] bg-primary-gradient ease duration-300 hover:bg-[length:100%_100%] hover:text-white sm:px-8 sm:py-3 sm:text-lg w-full px-4 sm:w-auto"><i className="fa-solid fa-folder"></i> Zobacz projekty</a>
+                        <a href="#about" className="text-white border-2 text-lg rounded-lg py-2 flex items-center gap-3 border-primary justify-center bg-primary sm:px-8 sm:py-3 sm:text-lg sm:w-auto px-4 w-full"><i className="fa-solid fa-briefcase"></i> Pobierz CV</a>
                     </div>
 
                     {/* Icons */}

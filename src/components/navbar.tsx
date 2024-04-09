@@ -1,4 +1,3 @@
-import { motion } from "framer-motion";
 import { useState } from "react";
 
 export const Navbar = () => {
@@ -17,11 +16,7 @@ export const Navbar = () => {
 
     
     return (
-        <motion.nav 
-            initial={{ opacity: 0, y: -70 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0, duration: 0.15 }}
-            className={stickyNav ? "navbar active z-40 fixed w-full bg-nav px-5 py-4 flex justify-between items-center sm:px-10 sm:py-6 ease-in duration-200" : "navbar z-40 fixed w-full bg-nav px-5 py-4 flex justify-between items-center sm:px-10 sm:py-6 ease-in duration-200"}>
+        <nav className={stickyNav ? "navbar active z-40 fixed w-full bg-nav px-5 py-4 flex justify-between items-center sm:px-10 sm:py-6 ease-in duration-200" : "navbar z-40 fixed w-full bg-nav px-5 py-4 flex justify-between items-center sm:px-10 sm:py-6 ease-in duration-200"}>
             
             <div className="logo flex gap-4 items-center">
                 <img src="img/logo.png" className="h-10 sm:h-12"></img>
@@ -49,7 +44,7 @@ export const Navbar = () => {
 
 
             {/* Mobile menu */}
-            <div className={mobileNav ? "mobile-links fixed -top-96 left-1/2 transform -translate-x-1/2 -translate-y-24 ease duration-200" : "mobile-links fixed w-max top-48 left-1/2 transform -translate-x-1/2 -translate-y-24 grid grid-cols-2 z-30 bg-nav rounded-lg px-3 py-6 justify-between gap-7 ease duration-200"}>
+            <div className={mobileNav ? "mobile-links fixed -bottom-96 left-1/2 transform -translate-x-1/2 -translate-y-24 ease duration-200" : "mobile-links fixed w-max -bottom-12 left-1/2 transform -translate-x-1/2 -translate-y-24 grid grid-cols-2 z-30 bg-nav rounded-lg px-3 py-6 justify-between gap-7 ease duration-200"}>
                 <a href="#home" className="text-primary ease duration-200 hover:text-primary flex flex-col items-center"><i className="fa-solid fa-house block text-xl"></i> Strona główna</a>
                 <a href="#about" className="ease duration-200 hover:text-primary text-text flex flex-col items-center"><i className="fa-solid fa-user block text-xl"></i> O mnie</a>
                 <a href="#skills" className="ease duration-200 hover:text-primary text-text flex flex-col items-center"><i className="fa-solid fa-list block text-xl"></i> Co umiem?</a>
@@ -57,6 +52,6 @@ export const Navbar = () => {
                 <a href="#contact" className="ease duration-200 hover:text-primary text-text flex flex-col items-center"><i className="fa-solid fa-phone-volume block text-xl"></i> Kontakt</a>
                 <a href="https://github.com/lis3q" target="_blank" className="text-md px-5 py-3 text-primary rounded-lg border-2 border-primary hover:text-white hover:bg-primary ease duration-200">Mój GitHub</a>
             </div>
-        </motion.nav>
+        </nav>
     )
 }
