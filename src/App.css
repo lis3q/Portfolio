@@ -20,6 +20,16 @@ nav.active {
     box-shadow: 2px 0 12px 1px #31313526;
 }
 
+.hero img {
+    height: 600px;
+    width: 440px;
+}
+
+.about img {
+    height: 550px;
+    width: 550px;
+}
+
 @media screen and (max-width: 768px) {
     nav.active {
         padding: 16px 20px;

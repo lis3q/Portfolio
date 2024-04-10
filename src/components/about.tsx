@@ -22,7 +22,7 @@ export const About = () => {
                     whileInView={{ opacity: 1, x: 0 }}
                     transition={{ delay: 0.1, duration: 0.4 }}
                     className="image">
-                    <img src="img/img.jpg" className="h-96 w-96 object-cover rounded-lg" alt="me"></img>
+                    <img src="img/img.jpg" className="w-max object-cover rounded-lg" alt="me"></img>
                 </motion.div>
 
                 {/* Content */}
