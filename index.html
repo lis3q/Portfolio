@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
@@ -19,8 +22,8 @@
             <div class="logo">Szymon.</div>
 
             <nav class="navbar">
-                <a href="#home" class="active" aria-label="Home">Home</a>
-                <a href="#about" aria-label="About Me">About Me</a>
+                <a href="#home" aria-label="Home" class="active">Home</a>
+                <a href="#about" aria-label="About">About</a>
                 <a href="#skills" aria-label="Skills">Skills</a>
                 <a href="#projects" aria-label="Projects">Projects</a>
                 <a href="#contact" aria-label="Contact">Contact</a>
@@ -180,22 +183,22 @@
             <!-- First name input -->
             <div class="input-wrapper">
                 <i class="fa-solid fa-user"></i>
-                <input type="text" placeholder="First Name">
+                <input type="text" placeholder="First Name" name="name" class="username" required>
             </div>
 
             <!-- E-mail input -->
             <div class="input-wrapper">
                 <i class="fa-solid fa-envelope"></i>
-                <input type="email" placeholder="E-mail">
+                <input type="email" placeholder="E-mail" name="email" class="useremail" required>
             </div>
 
             <!-- Message input -->
             <div class="input-wrapper">
                 <i class="fa-solid fa-message"></i>
-                <textarea placeholder="Your message"></textarea>
+                <textarea placeholder="Your message" name="message" class="usermessage" required></textarea>
             </div>
 
-            <input type="submit" value="Send Me Message">
+            <input type="submit" value="Send Me Message" class="submit-btn">
 
         </form>
 

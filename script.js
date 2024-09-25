@@ -61,3 +61,48 @@ ScrollReveal().reveal('#projects .project, #contact .form', {
     opacity: 0,
     interval: 200,
 });
+
+
+// Link active when scrolling
+const navlink = document.querySelectorAll("header nav a");
+
+const sections = document.querySelectorAll("section");
+window.onscroll = () => {
+    sections.forEach(section => {
+        let top = window.scrollY;
+        let offset = section.offsetTop - 200;
+        let height = section.offsetHeight;
+        let id = section.getAttribute('id');
+
+        if (top >= offset && top < offset + height) {
+            navlink.forEach(link => {
+                link.classList.remove("active");
+                document.querySelector('header nav a[href*=' + id + ']').classList.add("active");
+            })
+        }
+    })
+}
+
+
+// EmailJS
+emailjs.init("L1nGhYYZjrJsFZz2s");
+
+document.querySelector('#contact .form').addEventListener('submit', function(event) {
+    event.preventDefault();
+
+    emailjs.sendForm('service_kthim4f', 'template_xk6yhpl', '#contact .form').then(
+        (response) => {
+            console.log('SUCCESS!', response.status, response.text);
+            document.querySelector(".username").value = "";
+            document.querySelector(".useremail").value = "";
+            document.querySelector(".usermessage").value = "";
+
+            document.querySelector(".submit-btn").value = "Message sent! Thank you"
+            document.querySelector(".submit-btn").style.background = "var(--primary)";
+            document.querySelector(".submit-btn").style.color = "var(--white)";
+        },
+        (error) => {
+            console.log('FAILED...', error);
+        },
+    );
+});
