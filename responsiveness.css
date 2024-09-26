@@ -55,9 +55,8 @@
         width: 100%;
         height: max-content;
         transition: transform .25s ease-in-out;
-        background: var(--headerSticky);
+        background: var(--lightBlack);
         transform: translateX(-300%);
-        border-radius: 0 0 20% 20%;
     }
     header nav.active {
         transform: translateY(0);
