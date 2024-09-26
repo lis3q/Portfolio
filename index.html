@@ -2,12 +2,13 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
-
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsiveness.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <title>Szymon Front-End Developer | Portfolio</title>
@@ -19,7 +20,7 @@
 
         <!-- Header -->
         <header class="header">
-            <div class="logo">Szymon.</div>
+            <a href="#home" style="color: var(--white)"><div class="logo">Szymon &lt;/&gt;</div></a>
 
             <nav class="navbar">
                 <a href="#home" aria-label="Home" class="active">Home</a>
@@ -34,13 +35,19 @@
                 <a href="https://github.com/lis3q" target="_blank" aria-label="Visit my GitHub"><i class="fa-brands fa-github"></i></a>
             </div>
 
+            <div class="mobile-bar">
+                <i class="fa-solid fa-bars open-nav"></i>
+                <i class="fa-solid fa-xmark close-nav"></i>
+            </div>
+
         </header>
 
         <!-- Hero -->
         <div class="hero">
 
-            <h1>Hello! I'm <span>Szymon</span></h1>
-            <p>a web developer with over 3 years of experience in creating clean and modern websites using HTML, CSS, and JavaScript. I focus on understanding your needs and making sure we’re on the same page throughout the project.</p>
+            <h2>Hello!</h2>
+            <h1>I'm <span>Szymon</span></h1>
+            <p>a learning Front-End Developer dealing with creating clean and modern websites using HTML, CSS, and JavaScript. I focus on understanding your needs and making sure we’re on the same page throughout the project.</p>
             
             <div class="buttons">
                 <a href="#about">About Me</a>
@@ -77,7 +84,7 @@
             </div>
 
             <div class="text">
-                <h2>Hello, it's me! 👆</h2>
+                <h2>Hello!</h2>
                 <p>My name is Szymon. I’m a 17 years old Front-End Developer currently learning and improving my skills in web development. I have a strong interest in creating <b>beautiful</b> and <b>user-friendly</b> websites. My journey began with HTML, CSS, and JavaScript, and I’m always eager to explore new tools and frameworks.
                 <br><br>
                 I enjoy <b>solving</b> problems and bringing ideas to life through code. As I continue to learn, I’m excited to take on new <b>challenges</b> and <b>collaborate</b> with others. If you’re looking for a passionate developer who loves to learn and grow, feel free to reach out!</p>
@@ -100,7 +107,7 @@
 
             <!-- HTML -->
             <div class="skill html">
-                <div class="skill-info"> <h3>HTML</h3> <p>90%</p> </div>
+                <div class="skill-info"> <h3>HTML</h3> <p>96%</p> </div>
                 <div class="skill-bar"><div class="filled-bar"></div></div>
             </div>
 
@@ -168,6 +175,22 @@
 
             </div>
 
+            <!-- Project -->
+            <div class="project">
+
+                <div class="image"><img src="img/project.png" alt="Gym Landing Page"></div>
+                <div class="project-info">
+                    <h2 class="project-title">Gym Landing Page</h2>
+                    <p class="project-desc">Clean and fully responsive landing page about new opened gym</p>
+                    <p class="project-tech">Figma • HTML • CSS • JavaScript</p>
+                </div>
+                <div class="links">
+                    <a href="#" aria-label="Visit website"><i class="fa-solid fa-globe"></i></a>
+                    <a href="#" aria-label="View on GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+
+            </div>
+
         </div>
 
     </section>
@@ -214,7 +237,7 @@
 
         <div class="links">
             <a href="#home" class="active" aria-label="Home">Home</a>
-            <a href="#about" aria-label="About Me">About Me</a>
+            <a href="#about" aria-label="About Me">About</a>
             <a href="#skills" aria-label="Skills">Skills</a>
             <a href="#projects" aria-label="Projects">Projects</a>
             <a href="#contact" aria-label="Contact">Contact</a>

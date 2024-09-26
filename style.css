@@ -35,6 +35,9 @@ html {
     scroll-behavior: smooth;
     scroll-padding-top: 50px;
 }
+body {
+    overflow-x: hidden !important;
+}
 section {
     padding: 50px 60px;
 }
@@ -125,6 +128,9 @@ header .icons a {
 header .icons a:hover {
     color: var(--primary);
 }
+header .mobile-bar {
+    display: none;
+}
 
 
 /* Hero */
@@ -137,6 +143,11 @@ header .icons a:hover {
     justify-content: center;
     text-align: center;
     margin-top: 12%;
+}
+.hero h2 {
+    font-family: var(--primaryFont);
+    font-size: 42px;
+    color: var(--white);
 }
 .hero h1 {
     color: var(--white);
@@ -216,6 +227,7 @@ header .icons a:hover {
 }
 .about-container .images {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 40px;
@@ -245,7 +257,8 @@ header .icons a:hover {
     border-radius: 5px;
     font-size: 20px;
 }
-.about-container .images .image-container:hover .overlay {
+.about-container .images .image-container:hover .overlay,
+.about-container .images .image-container:active .overlay {
     opacity: 1;
 }
 .about-container .text {
@@ -317,9 +330,8 @@ header .icons a:hover {
 
 /* HTML */
 .skill.html .filled-bar {
-    width: 90%;
+    width: 96%;
     background: #E34C26;
-    animation: htmlbar forwards 10s linear;
 }
 .skill.html .skill-info h3 {
     color: #E34C26;
