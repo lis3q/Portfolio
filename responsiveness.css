@@ -1,10 +1,16 @@
 /* Laptops */
 @media screen and (max-width: 1660px) {
+    .hero {
+        margin-top: 10%;
+    }
     .hero h1 {
         font-size: 64px;
     }
     .hero p {
         font-size: 22px;
+    }
+    .hero .arrow {
+        margin-top: 8%;
     }
     #about .text {
         width: 60%;
