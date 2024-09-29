@@ -146,16 +146,13 @@ header .mobile-bar {
 }
 .hero h2 {
     font-family: var(--primaryFont);
-    font-size: 42px;
-    color: var(--white);
+    font-size: 24px;
+    color: var(--primary);
 }
 .hero h1 {
     color: var(--white);
     font-size: 76px;
     font-family: var(--primaryFont);
-}
-.hero span {
-    color: var(--primary);
 }
 .hero p {
     color: var(--heroText);
