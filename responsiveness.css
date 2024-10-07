@@ -73,7 +73,7 @@
         margin-top: 30%;
     }
     .hero h2 {
-        font-size: 26px;
+        font-size: 12px;
     }
     .hero h1 {
         font-size: 42px;
@@ -91,6 +91,10 @@
     }
 
     /* About */
+    #about .about-container {
+        flex-direction: column;
+        gap: 36px;
+    }
     #about .text {
         width: 100%;
     }
@@ -100,6 +104,7 @@
     }
     #about .text h2 {
         font-size: 26px;
+        text-align: center;
     }
     #about .text p {
         text-align: justify;
@@ -125,28 +130,14 @@
 
     /* Projects */
     .project {
-        width: 240px;
-        height: 290px;
-    }
-    .project .project-info {
-        padding: 14px 10px;
-    }
-    .project .image {
-        height: 120px;
+        width: 100%;
+        height: max-content;
     }
     .project-title {
         font-size: 20px;
     }
-    .project-desc {
-        display: none;
-    }
     .project-tech {
-        margin-top: 10px;
         font-size: 14px;
-    }
-    .project .links {
-        bottom: 6px;
-        transform: translate(-50%, -6px);
     }
     .project .links a {
         font-size: 16px;
