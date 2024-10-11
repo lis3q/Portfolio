@@ -13,7 +13,16 @@
         margin-top: 8%;
     }
     #about .text {
-        width: 60%;
+        width: 50%;
+    }
+    #about .text h2 {
+        font-size: 34px;
+    }
+    #about .text p {
+        font-size: 17px;
+    }
+    #about .button {
+        font-size: 15px;
     }
 }
 
