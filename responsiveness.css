@@ -24,6 +24,10 @@
     #about .button {
         font-size: 15px;
     }
+    #about .image-container img {
+        height: 420px;
+        width: 320px;
+    }
 }
 
 /* Phones */
