@@ -65,7 +65,7 @@
     }
     header nav {
         position: absolute;
-        top: 76px;
+        top: 66px;
         left: 0;
         padding: 24px 0;
         flex-direction: column;
@@ -94,7 +94,7 @@
     .hero p {
         font-size: 18px;
         width: 100%;
-        text-align: justify;
+        text-align: center;
     }
     .hero .buttons a {
         font-size: 16px;
