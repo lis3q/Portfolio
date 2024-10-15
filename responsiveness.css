@@ -42,11 +42,11 @@
     /* Header */
     header {
         padding: 0 20px;
-        height: 76px;
-        background: var(--black);
+        height: 60px;
+        background: #1d1d1d;
     }
     header .logo {
-        font-size: 26px;
+        font-size: 24px;
     }
     header .mobile-bar {
         display: block;
@@ -65,7 +65,7 @@
     }
     header nav {
         position: absolute;
-        top: 66px;
+        top: 60px;
         left: 0;
         padding: 24px 0;
         flex-direction: column;
@@ -74,7 +74,8 @@
         width: 100%;
         height: max-content;
         transition: transform .25s ease-in-out;
-        background: var(--lightBlack);
+        background: #202020;
+        box-shadow: 0 4px 12px 0 #20202021;
         transform: translateX(-300%);
     }
     header nav.active {
@@ -83,21 +84,21 @@
 
     /* Hero */
     .hero {
-        margin-top: 30%;
+        margin-top: 40%;
     }
     .hero h2 {
-        font-size: 12px;
+        font-size: 14px;
     }
     .hero h1 {
-        font-size: 42px;
+        font-size: 46px;
     }
     .hero p {
         font-size: 18px;
         width: 100%;
-        text-align: center;
+        text-align: justify;
     }
     .hero .buttons a {
-        font-size: 16px;
+        font-size: 15px;
     }
     .hero .arrow {
         display: none;
@@ -116,8 +117,7 @@
         height: 420px;
     }
     #about .text h2 {
-        font-size: 26px;
-        text-align: center;
+        font-size: 30px;
     }
     #about .text p {
         text-align: justify;

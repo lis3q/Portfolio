@@ -12,7 +12,7 @@
     --black: #171717;
     --lightBlack: #1A1A1A;
     --grey: #7D7D7D;
-    --heroText: #afafaf;
+    --heroText: #e0e0e0;
     --primaryFont: 'Montserrat', sans-serif;
     --secondaryFont: 'Poppins', sans-serif;
     --headerSticky: #252525;
@@ -71,8 +71,8 @@ section {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url("https://i.imgur.com/jZrHMOi.jpeg") no-repeat center center/cover;
-    opacity: 20%;
+    background: url("bg.jpg") no-repeat center center/cover;
+    opacity: 10%;
     z-index: -1;
 }
 
@@ -156,6 +156,7 @@ header .mobile-bar {
     font-family: var(--primaryFont);
 }
 .hero p {
+    font-weight: 300;
     color: var(--heroText);
     font-size: 24px;
     font-family: var(--secondaryFont);
@@ -179,6 +180,7 @@ header .mobile-bar {
     background-size: 0 100%;
     transition: all .2s;
     border-radius: 5px;
+    box-shadow: 0 4px 12px 0 #ffffff21;
 }
 .hero .buttons a:hover {
     color: var(--black);
@@ -194,6 +196,7 @@ header .mobile-bar {
     background-repeat: no-repeat;
     background-size: 100% 0;
     border: 2px solid var(--primary);
+    box-shadow: 0 4px 12px 0 #ff4d6b21;
 }
 .hero .arrow:hover {
     background-size: 100% 100%;
@@ -224,19 +227,16 @@ header .mobile-bar {
 }
 .about-container .images {
     display: flex;
-    flex-direction: column;
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 40px;
 }
-.about-container .images .image-container img {
+.about-container .images img {
     width: 360px;
     height: 460px;
     border-radius: 5px;
-}
-.about-container .images .image-container {
-    position: relative;
+    box-shadow: 0 4px 12px 0 #ffffff0c;
 }
 .about-container .images .overlay {
     position: absolute;
@@ -284,6 +284,7 @@ header .mobile-bar {
     background-size: 0 100%;
     transition: all .2s;
     border-radius: 5px;
+    box-shadow: 0 4px 12px 0 #ffffff21;
 }
 .about-container .button:hover {
     color: var(--black);
@@ -498,6 +499,7 @@ header .mobile-bar {
     font-family: var(--secondaryFont);
     transition: all .2s ease;
     border: 1px solid var(--primary);
+    box-shadow: 0 4px 12px 0 #ff4d6b21;
 }
 .form input[type="submit"]:hover {
     background: var(--primaryHover);
