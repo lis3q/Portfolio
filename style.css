@@ -405,8 +405,12 @@ header .mobile-bar {
 .project {
     z-index: 0;
     width: 400px;
-    height: 500px;
     font-family: var(--secondaryFont);
+    padding: 18px;
+    border-radius: 10px;
+}
+.project.recent {
+    background: #ff4d6b39;
 }
 .project .image {
     height: 240px;
