@@ -11,7 +11,7 @@
     --white: #fff;
     --black: #171717;
     --lightBlack: #1A1A1A;
-    --grey: #7D7D7D;
+    --grey: #9f9f9f;
     --heroText: #e0e0e0;
     --primaryFont: 'Montserrat', sans-serif;
     --secondaryFont: 'Poppins', sans-serif;
@@ -222,8 +222,7 @@ header .mobile-bar {
 .about-container {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: center;
-    gap: 50px;
+    justify-content: space-between;
 }
 .about-container .images {
     display: flex;
@@ -406,15 +405,14 @@ header .mobile-bar {
     z-index: 0;
     width: 400px;
     font-family: var(--secondaryFont);
-    padding: 18px;
-    border-radius: 10px;
 }
-.project.recent {
-    background: #ff4d6b39;
+.project.recent .image {
+    border: 2px solid var(--primary);
 }
 .project .image {
     height: 240px;
     width: 100%;
+    border-radius: 10px;
 }
 .project .image img {
     height: 100%;
