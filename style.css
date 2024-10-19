@@ -404,10 +404,11 @@ header .mobile-bar {
 .project {
     z-index: 0;
     width: 400px;
+    height: 500px;
     font-family: var(--secondaryFont);
 }
 .project.recent .image {
-    border: 2px solid var(--primary);
+    border: 3px solid var(--primary);
 }
 .project .image {
     height: 240px;
