@@ -142,6 +142,9 @@
     }
 
     /* Projects */
+    .projects-container {
+        padding-bottom: 24px;
+    }
     .project {
         width: 100%;
         height: max-content;
@@ -154,6 +157,9 @@
     }
     .project .links a {
         font-size: 16px;
+    }
+    .soon {
+        font-size: 38px;
     }
 
     /* Contact */

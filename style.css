@@ -37,7 +37,7 @@ html {
     scroll-padding-top: 50px;
 }
 body {
-    overflow-x: hidden !important;
+    overflow-x: hidden;
 }
 section {
     padding: 50px 60px;
@@ -396,16 +396,30 @@ header .mobile-bar {
 }
 .projects-container {
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 60px;
+    gap: 100px;
+    width: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+}
+.projects-container::-webkit-scrollbar {
+    height: 6px;
+}
+.projects-container::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+.projects-container::-webkit-scrollbar-thumb {
+    background: var(--grey);
+    border-radius: 10px;
 }
 .project {
+    scroll-snap-align: start;
     z-index: 0;
     width: 400px;
     height: 500px;
     font-family: var(--secondaryFont);
+    flex-shrink: 0;
 }
 .project.recent .image {
     border: 3px solid var(--primary);
@@ -446,6 +460,13 @@ header .mobile-bar {
 }
 .project .links a:hover {
     color: var(--primary);
+}
+.soon {
+    font-family: var(--primaryFont);
+    color: var(--grey);
+    font-size: 44px;
+    text-align: center;
+    opacity: 0.2;
 }
 
 

@@ -53,7 +53,7 @@ ScrollReveal().reveal('.about-container .right-img, .skill.css, .skill.tailwind,
     interval: 200,
     easing: 'ease-in-out',
 });
-ScrollReveal().reveal('#projects .project, #contact form', {
+ScrollReveal().reveal('#contact form', {
     delay: 300,
     duration: 1000,
     origin: 'bottom',
