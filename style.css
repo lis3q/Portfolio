@@ -37,7 +37,7 @@ html {
     scroll-padding-top: 50px;
 }
 body {
-    overflow-x: hidden;
+    overflow-x: hidden !important;
 }
 section {
     padding: 50px 60px;
