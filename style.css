@@ -35,6 +35,7 @@
 html {
     scroll-behavior: smooth;
     scroll-padding-top: 50px;
+    overflow-x: hidden !important;
 }
 body {
     overflow-x: hidden !important;
