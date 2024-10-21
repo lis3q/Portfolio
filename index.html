@@ -24,32 +24,37 @@
 </head>
 <body>
 
+    <!-- Overlay -->
+    <div class="overlay"></div>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="#home" style="color: var(--white)" aria-label="Home"><div class="logo">Szymon <i class="fa-solid fa-code"></i></div></a>
+
+        <nav class="navbar">
+            <a href="#home" aria-label="Home" class="active">Home</a>
+            <a href="#about" aria-label="About">About</a>
+            <a href="#skills" aria-label="Skills">Skills</a>
+            <a href="#projects" aria-label="Projects">Projects</a>
+            <a href="#contact" aria-label="Contact">Contact</a>
+        </nav>
+
+        <div class="icons">
+            <a href="https://www.instagram.com/szymon.frontend/" target="_blank" aria-label="Visit my Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="https://github.com/lis3q" target="_blank" aria-label="Visit my GitHub"><i class="fa-brands fa-github"></i></a>
+        </div>
+
+        <input type="checkbox" id="menu_checkbox">
+        <label for="menu_checkbox">
+            <div></div>
+            <div></div>
+            <div></div>
+        </label>
+
+    </header>
+
     <!-- Home -->
     <section id="home">
-
-        <!-- Header -->
-        <header class="header">
-            <a href="#home" style="color: var(--white)" aria-label="Home"><div class="logo">Szymon <i class="fa-solid fa-code"></i></div></a>
-
-            <nav class="navbar">
-                <a href="#home" aria-label="Home" class="active">Home</a>
-                <a href="#about" aria-label="About">About</a>
-                <a href="#skills" aria-label="Skills">Skills</a>
-                <a href="#projects" aria-label="Projects">Projects</a>
-                <a href="#contact" aria-label="Contact">Contact</a>
-            </nav>
-
-            <div class="icons">
-                <a href="https://www.instagram.com/szymon.frontend/" target="_blank" aria-label="Visit my Instagram"><i class="fa-brands fa-instagram"></i></a>
-                <a href="https://github.com/lis3q" target="_blank" aria-label="Visit my GitHub"><i class="fa-brands fa-github"></i></a>
-            </div>
-
-            <div class="mobile-bar">
-                <i class="fa-solid fa-bars open-nav"></i>
-                <i class="fa-solid fa-xmark close-nav"></i>
-            </div>
-
-        </header>
 
         <!-- Hero -->
         <div class="hero">
@@ -90,9 +95,11 @@
 
             <div class="text">
                 <h2>Hello 👋</h2>
-                <p>My name is Szymon. I’m a 17 years old Front-End Developer currently learning and improving my skills in web development. I have a strong interest in creating <b>beautiful</b> and <b>user-friendly</b> websites. My journey began with HTML, CSS, and JavaScript, and I’m always eager to explore new tools and frameworks.
+                <p>My name is Szymon. I’m a 17 years old Front-End Developer currently learning and improving my skills in web development. I have a strong interest in creating <strong>beautiful</strong> and <strong>user-friendly</strong> websites. My journey began with HTML, CSS, and JavaScript, and I’m always eager to explore new tools and frameworks.
                 <br><br>
-                I enjoy <b>solving</b> problems and bringing ideas to life through code. As I continue to learn, I’m excited to take on new <b>challenges</b> and <b>collaborate</b> with others. If you’re looking for a passionate developer who loves to learn and grow, feel free to reach out!</p>
+                In addition to coding, I am also passionate about <strong>web design</strong> and often use Figma to create visually appealing layouts and prototypes. I believe that great design goes hand in hand with effective development, and I enjoy the process of transforming ideas into functional and attractive user interfaces.
+                <br><br>
+                I enjoy <b>solving</b> problems and bringing ideas to life through code. As I continue to learn, I’m excited to take on new <strong>challenges</strong> and <strong>collaborate</strong> with others. If you’re looking for a passionate developer who loves to learn and grow, feel free to reach out!</p>
                 <a href="#projects" class="button" aria-label="View projects">View projects</a>
 
             </div>

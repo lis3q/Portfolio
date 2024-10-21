@@ -107,21 +107,18 @@ document.querySelector('#contact .form').addEventListener('submit', function(eve
 
 
 // Mobile navbar
-const openNavBtn = document.querySelector(".open-nav");
-const closeNavBtn = document.querySelector(".close-nav");
-const navbar = document.querySelector("header nav")
+const menuCheckbox = document.querySelector("#menu_checkbox");
+const nav = document.querySelector("nav");
 
-openNavBtn.addEventListener("click", () => {
-    openNavBtn.style.display = "none";
-    closeNavBtn.style.display = "block"
-    navbar.classList.add("active");
-})
-
-closeNavBtn.addEventListener("click", () => {
-    openNavBtn.style.display = "block";
-    closeNavBtn.style.display = "none"
-    navbar.classList.remove("active");
-})
+menuCheckbox.addEventListener("change", () => {
+    if (menuCheckbox.checked) {
+        nav.classList.add("active");
+        document.querySelector(".overlay").classList.add("active");
+    } else {
+        nav.classList.remove("active");
+        document.querySelector(".overlay").classList.remove("active");
+    }
+});
 
 // Closing mobile navbar when link clicked
 const links = document.querySelectorAll("header nav a");

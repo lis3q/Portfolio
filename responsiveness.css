@@ -15,15 +15,6 @@
     #about .text {
         width: 40%;
     }
-    #about .text h2 {
-        font-size: 34px;
-    }
-    #about .text p {
-        font-size: 17px;
-    }
-    #about .button {
-        font-size: 15px;
-    }
     #about .image-container img {
         height: 420px;
         width: 320px;
@@ -43,22 +34,16 @@
     header {
         padding: 0 20px;
         height: 60px;
-        background: #1d1d1d;
+        background: #2b2b2b;
+    }
+    header.sticky {
+        height: 60px;
     }
     header .logo {
-        font-size: 24px;
-    }
-    header .mobile-bar {
-        display: block;
-    }
-    header .mobile-bar .close-nav {
-        display: none;
-        font-size: 26px;
-        cursor: pointer;
-    }
-    header .mobile-bar .open-nav {
         font-size: 22px;
-        cursor: pointer;
+    }
+    header label {
+        display: block;
     }
     header .icons {
         display: none;
@@ -67,16 +52,17 @@
         position: absolute;
         top: 60px;
         left: 0;
-        padding: 24px 0;
         flex-direction: column;
-        z-index: 999 !important;
-        gap: 20px;
-        width: 100%;
-        height: max-content;
-        transition: transform .25s ease-in-out;
-        background: #202020;
-        box-shadow: 0 4px 12px 0 #20202021;
-        transform: translateX(-300%);
+        z-index: 900 !important;
+        gap: 30px;
+        justify-content: center;
+        width: 40%;
+        height: 100vh;
+        transition: transform .5s cubic-bezier(0.77,0.2,0.05,1.0);
+        background: #222222;
+        transform: translateX(-100%);
+        color: var(--black);
+        padding-bottom: 60px;
     }
     header nav.active {
         transform: translateY(0);

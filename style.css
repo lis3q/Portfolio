@@ -57,6 +57,23 @@ section {
     color: var(--primary);
 }
 
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    z-index: 2;
+    background: var(--black);
+    transform: translateX(100%);
+    opacity: 0.5;
+    transition: transform .5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+.overlay.active {
+    transform: translateX(0);
+}
+
 /* Home section */
 #home {
     position: relative;
@@ -129,9 +146,43 @@ header .icons a {
 header .icons a:hover {
     color: var(--primary);
 }
-header .mobile-bar {
+
+/* Hamburger menu */
+#menu_checkbox {
     display: none;
 }
+label {
+    display: none;
+    width: 30px;
+    cursor: pointer;
+}
+label div {
+    position: relative;
+    width: 24px;
+    height: 4px;
+    background-color: var(--white, black);
+    margin-bottom: 5px;
+    transition: 0.4s ease transform, 0.4s ease top, 0.4s ease opacity;
+    border-radius: 2px;
+}
+label div:last-child {
+    margin-bottom: 0;
+}
+/* Animacja do "X" */
+#menu_checkbox:checked + label div:first-child {
+    transform: rotate(45deg);
+    top: 9px;
+}
+
+#menu_checkbox:checked + label div:nth-child(2) {
+    opacity: 0;
+}
+
+#menu_checkbox:checked + label div:last-child {
+    transform: rotate(-45deg);
+    top: -9px;
+}
+
 
 
 /* Hero */
@@ -267,7 +318,7 @@ header .mobile-bar {
     color: var(--white);
 }
 .about-container .text p {
-    font-size: 19px;
+    font-size: 17px;
     color: var(--grey);
     margin-bottom: 36px;
     line-height: 180%;
@@ -277,7 +328,7 @@ header .mobile-bar {
     border: 2px solid var(--white);
     font-family: var(--secondaryFont);
     color: var(--white);
-    font-size: 16px;
+    font-size: 15px;
     background: linear-gradient(var(--white), var(--white));
     background-repeat: no-repeat;
     background-size: 0 100%;
