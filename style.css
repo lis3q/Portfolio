@@ -90,7 +90,7 @@ section {
     width: 100%;
     height: 100%;
     background: url("bg.jpg") no-repeat center center/cover;
-    opacity: 10%;
+    opacity: 5%;
     z-index: -1;
 }
 
@@ -448,12 +448,11 @@ label div:last-child {
 }
 .projects-container {
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
     gap: 100px;
     width: 100%;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
 }
 .projects-container::-webkit-scrollbar {
     height: 6px;
@@ -466,15 +465,16 @@ label div:last-child {
     border-radius: 10px;
 }
 .project {
-    scroll-snap-align: start;
     z-index: 0;
     width: 400px;
     height: 500px;
     font-family: var(--secondaryFont);
-    flex-shrink: 0;
 }
 .project.recent .image {
     border: 3px solid var(--primary);
+}
+.projects-container.designs .project {
+    width: 340px;
 }
 .project .image {
     height: 240px;
@@ -541,7 +541,7 @@ label div:last-child {
 .form .input-wrapper i {
     position: absolute;
     left: 14px;
-    top: 18px;
+    top: 15px;
     color: var(--white);
     font-size: 18px;
 }
@@ -552,8 +552,8 @@ label div:last-child {
     border: 1px solid var(--white);
     border-radius: 5px;
     font-family: var(--secondaryFont);
-    font-size: 17px;
-    height: 52px;
+    font-size: 16px;
+    height: 48px;
     background: var(--black);
     color: var(--white);
 }
@@ -569,7 +569,7 @@ label div:last-child {
     border-radius: 5px;
     background: var(--primary);
     color: var(--white);
-    font-size: 18px;
+    font-size: 17px;
     height: 52px;
     cursor: pointer;
     font-family: var(--secondaryFont);
