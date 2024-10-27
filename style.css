@@ -451,7 +451,8 @@ label div:last-child {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 100px;
+    row-gap: 10px;
+    column-gap: 100px;
     width: 100%;
 }
 .projects-container::-webkit-scrollbar {
@@ -474,7 +475,7 @@ label div:last-child {
     border: 3px solid var(--primary);
 }
 .projects-container.designs .project {
-    width: 340px;
+    width: 370px;
 }
 .project .image {
     height: 240px;
