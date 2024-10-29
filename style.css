@@ -478,9 +478,8 @@ label div:last-child {
     height: 100%;
 }
 .projects-container.designs .project {
-    width: 460px;
+    width: 640px;
     height: 640px;
-    background-color: red;
 }
 .projects-container.designs .image img {
     border-radius: 0;
