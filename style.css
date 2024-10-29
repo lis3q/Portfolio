@@ -471,11 +471,11 @@ label div:last-child {
     height: 500px;
     font-family: var(--secondaryFont);
 }
-.project.recent .image {
-    border: 3px solid var(--primary);
-}
 .projects-container.designs {
     column-gap: 40px;
+}
+.projects-container.designs .image {
+    height: 100%;
 }
 .projects-container.designs .project {
     width: 460px;
