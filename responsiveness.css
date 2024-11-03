@@ -130,10 +130,14 @@
     /* Projects */
     .projects-container {
         padding-bottom: 24px;
+        gap: 60px;
     }
     .project {
         width: 100%;
         height: max-content;
+    }
+    .project .image {
+        height: 180px;
     }
     .project-title {
         font-size: 20px;
@@ -142,10 +146,11 @@
         font-size: 14px;
     }
     .project .links a {
-        font-size: 16px;
+        font-size: 17px;
     }
-    .soon {
-        font-size: 38px;
+    .projects-container.designs .project {
+        width: max-content;
+        height: 360px !important;
     }
 
     /* Contact */
