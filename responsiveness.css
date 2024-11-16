@@ -29,6 +29,15 @@
     .section-heading h2 {
         font-size: 22px;
     }
+    .btn {
+        font-size: 14px !important;
+    }
+    .section-heading h2::before {
+        left: -90px;
+    }
+    .section-heading h2::after {
+        right: -90px;
+    }
 
     /* Header */
     header {
@@ -53,27 +62,45 @@
         top: 60px;
         left: 0;
         flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        padding: 0 20px;
         z-index: 900 !important;
         gap: 30px;
-        justify-content: center;
         width: 40%;
         height: 100vh;
         transition: transform .5s cubic-bezier(0.77,0.2,0.05,1.0);
-        background: #222222;
+        background: #1b1b1b;
         transform: translateX(-100%);
         color: var(--black);
         padding-bottom: 60px;
     }
+    header nav a {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 4px 12px;
+        gap: 12px;
+    }
     header nav.active {
         transform: translateY(0);
+    }
+    header nav a i {
+        display: block !important;
+    }
+
+    #home {
+        min-height: 70vh;
     }
 
     /* Hero */
     .hero {
-        margin-top: 40%;
+        margin-top: 20%;
+        text-align: center;
     }
     .hero h2 {
-        font-size: 14px;
+        font-size: 17px;
+        margin-bottom: 2px;
     }
     .hero h1 {
         font-size: 46px;
@@ -83,10 +110,14 @@
         width: 100%;
         text-align: justify;
     }
+    .hero .buttons {
+        justify-content: center;
+    }
     .hero .buttons a {
         font-size: 15px;
     }
-    .hero .arrow {
+    .hero .image,
+    .hero .imageBlured {
         display: none;
     }
 
@@ -133,11 +164,11 @@
         gap: 60px;
     }
     .project {
-        width: 100%;
+        width: 300px;
         height: max-content;
     }
     .project .image {
-        height: 180px;
+        height: 260px;
     }
     .project-title {
         font-size: 20px;
@@ -165,7 +196,6 @@
         font-size: 16px;
     }
     .form input[type="submit"] {
-        width: 100%;
         font-size: 16px;
         height: 48px;
     }
