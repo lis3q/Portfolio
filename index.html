@@ -29,7 +29,7 @@
 
     <!-- Header -->
     <header class="header">
-        <a href="#home" style="color: var(--white)" aria-label="Home"><div class="logo">Szymon <i class="fa-solid fa-code"></i></div></a>
+        <a href="#home" aria-label="Home"><div class="logo"></div></a>
 
         <nav class="navbar">
             <a href="#home" aria-label="Home" class="active">Home</a>
@@ -59,16 +59,19 @@
         <!-- Hero -->
         <div class="hero">
 
-            <h2>Front-End Dev & Web Designer</h2>
-            <h1>Szymon Lisek</h1>
-            <p>a learning Front-End Developer dealing with creating clean and modern websites using HTML, CSS, and JavaScript. I focus on understanding your needs and making sure we’re on the same page throughout the project.</p>
-            
-            <div class="buttons">
-                <a href="#about">About Me</a>
-                <a href="#projects">My Projects</a>
+            <div class="content">
+                <h2>Front-End Dev & Web Designer</h2>
+                <h1>Szymon Lisek</h1>
+                <p>a learning Front-End Developer dealing with creating clean and modern websites using HTML, CSS, and JavaScript. I focus on understanding your needs and making sure we’re on the same page throughout the project.</p>
+                
+                <div class="buttons">
+                    <a href="#about" class="btn"><i class="fa-solid fa-user"></i> About Me</a>
+                    <a href="#projects" class="btn"><i class="fa-solid fa-briefcase"></i> My Projects</a>
+                </div>
             </div>
 
-            <a href="#about" aria-label="About Me" class="arrow"><i class="fa-solid fa-arrow-down"></i></a>
+            <div class="image"><img src="logo.jpeg" alt="Me in the Tatra Mountains"></div>
+            <div class="imageBlured"><img src="logo.jpeg" alt="Me in the Tatra Mountains"></div>
 
         </div>
 
@@ -100,7 +103,8 @@
                 In addition to coding, I am also passionate about <strong>web design</strong> and often use Figma to create visually appealing layouts and prototypes. I believe that great design goes hand in hand with effective development, and I enjoy the process of transforming ideas into functional and attractive user interfaces.
                 <br><br>
                 I enjoy <b>solving</b> problems and bringing ideas to life through code. As I continue to learn, I’m excited to take on new <strong>challenges</strong> and <strong>collaborate</strong> with others. If you’re looking for a passionate developer who loves to learn and grow, feel free to reach out!</p>
-                <a href="#projects" class="button" aria-label="View projects">View projects</a>
+
+                <a href="#projects" class="btn" aria-label="View projects"><i class="fa-solid fa-briefcase"></i> View Projects</a>
 
             </div>
 
@@ -171,9 +175,26 @@
 
         <div class="projects-container">
 
+            <!-- Samarth Portfolio -->
+            <div class="project">
+                <a href="https://designsbysamarth.netlify.app/" aria-label="Visit website" target="_blank"><div class="image"><img src="projects/Samarth.png" alt="Project thumbnail"></div></a>
+                <p class="project-tech">Portfolio</p>
+
+                <div class="project-info">
+                    <h2 class="project-title">Samarth - Graphic Designer</h2>
+                    <p class="project-desc">Modern and fully responsive portfolio for graphic designer - Samarth.</p>
+                </div>
+
+                <div class="links">
+                    <a href="https://sonicwavecreation.netlify.app/" aria-label="Visit website" target="_blank"><i class="fa-solid fa-globe"></i></a>
+                    <a href="https://github.com/lis3q/Samarth---Portfolio" aria-label="View on GitHub" target="_blank"><i class="fa-brands fa-github"></i></a>
+                </div>
+
+            </div>
+
             <!-- Bakir Portfolio -->
             <div class="project">
-                <div class="image"><img src="https://i.imgur.com/8nPvZRy.png" alt="Bakir portfolio thumbnail"></div>
+                <a href="https://sonicwavecreation.netlify.app/" aria-label="Visit website" target="_blank"><div class="image"><img src="projects/Bakir.png" alt="Project thumbnail"></div></a>
                 <p class="project-tech">Portfolio</p>
 
                 <div class="project-info">
@@ -190,7 +211,7 @@
 
             <!-- Watchly. -->
             <div class="project">
-                <div class="image"><img src="https://i.imgur.com/PKunIzh.png" alt="Watchly website thumbnail"></div>
+                <a href="https://yourwatchly.netlify.app/" aria-label="Visit website" target="_blank"><div class="image"><img src="projects/Watchly.png" alt="Project thumbnail"></div></a>
                 <p class="project-tech">Landing page</p>
 
                 <div class="project-info">
@@ -208,7 +229,7 @@
             <!-- Video Editor Portfolio -->
             <div class="project">
 
-                <div class="image"><img src="https://i.imgur.com/0Z3wxTb.png" alt="Video Editor Portfolio website thumbnail"></div>
+                <a href="https://johndoevideditor.netlify.app/" aria-label="Visit website" target="_blank"><div class="image"><img src="projects/VideoEditor.png" alt="Project thumbnail"></div></a>
                 <p class="project-tech">Portfolio</p>
 
                 <div class="project-info">
@@ -226,7 +247,7 @@
             <!-- Cook with Anna Blog -->
             <div class="project">
 
-                <div class="image"><img src="https://i.imgur.com/6JTgvea.png" alt="Cook with Anna website thumbnail"></div>
+                <a href="https://cookwithannablog.netlify.app/" aria-label="Visit website" target="_blank"><div class="image"><img src="projects/AnnaCooking.png" alt="Project thumbnail"></div></a>
                 <p class="project-tech">Blog</p>
 
                 <div class="project-info">
@@ -244,7 +265,7 @@
             <!-- Travel website -->
             <div class="project">
 
-                <div class="image"><img src="https://i.imgur.com/fGWfSIA.png" alt="Travel website thumbnail"></div>
+                <a href="https://travelexplorerwebsite.netlify.app/" aria-label="Visit website" target="_blank"><div class="image"><img src="projects/TravelExplorer.png" alt="Project thumbnail"></div></a>
                 <p class="project-tech">Landing page</p>
 
                 <div class="project-info">
@@ -269,12 +290,12 @@
 
             <!-- Financly -->
             <div class="project">
-                <div class="image"><img src="Financly.png" alt="Financly - Mobile App website design thumbnail"></div>
+                <div class="image"><img src="projects/Financly.png" alt="Project thumbnail"></div>
             </div>
             
             <!-- FitLife -->
             <div class="project">
-                <div class="image"><img src="https://i.imgur.com/pQkGPRZ.png" alt="FitLife - Personal Trainer website design thumbnail"></div>
+                <div class="image"><img src="https://i.imgur.com/pQkGPRZ.png" alt="Project thumbnail"></div>
             </div>
 
 

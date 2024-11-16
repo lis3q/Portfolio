@@ -6,16 +6,15 @@
 
 /* Variables */
 :root {
-    --primary: #ff4d6b;
-    --primaryHover: #eb415d;
+    --primary: #3596e0;
+    --primaryHover: #2f8cd2;
     --white: #fff;
-    --black: #171717;
-    --lightBlack: #1A1A1A;
+    --black: #111111;
+    --lightBlack: #141414;
     --grey: #9f9f9f;
     --heroText: #e0e0e0;
     --primaryFont: 'Montserrat', sans-serif;
     --secondaryFont: 'Poppins', sans-serif;
-    --headerSticky: #252525;
 }
 
 /* Main settings */
@@ -23,7 +22,7 @@
     width: 10px;
 }
 ::-webkit-scrollbar-track {
-    background: var(--headerSticky);
+    background: #252525;
 }
 ::-webkit-scrollbar-thumb {
     background: var(--primary);
@@ -41,21 +40,67 @@ body {
     overflow-x: hidden !important;
 }
 section {
-    padding: 50px 60px;
+    padding: 50px 80px;
 }
 .section-heading {
-    margin-bottom: 60px;
+    margin-bottom: 90px;
 }
 .section-heading h2 {
+    position: relative;
     font-family: var(--primaryFont);
     color: var(--white);
     text-align: center;
-    font-size: 26px;
+    font-size: 30px;
     width: max-content;
     margin: 0 auto;
 }
+.section-heading h2 {
+    position: relative;
+    font-family: var(--primaryFont);
+    color: var(--white);
+    text-align: center;
+    font-size: 30px;
+    width: max-content;
+    margin: 0 auto;
+}
+.section-heading h2::before,
+.section-heading h2::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 70px; 
+    height: 4px;
+    border-radius: 10px;
+    background-color: var(--primary);
+}
+.section-heading h2::before {
+    left: -100px; /* Odległość od lewej strony tekstu */
+}
+.section-heading h2::after {
+    right: -100px; /* Odległość od prawej strony tekstu */
+}
 .section-heading span {
     color: var(--primary);
+}
+.btn {
+    padding: 8px 20px;
+    border: 2px solid var(--primary);
+    font-family: var(--secondaryFont);
+    color: var(--primary);
+    font-size: 16px;
+    background: linear-gradient(var(--primary), var(--primary));
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    transition: all .2s;
+    border-radius: 40px;
+    box-shadow: 0 4px 12px 0 #3596e021;
+}
+.btn i {
+    margin-right: 4px;
+}
+.btn:hover {
+    color: var(--white);
+    background-size: 100% 100%;
 }
 
 /* Overlay */
@@ -77,27 +122,14 @@ section {
 
 /* Home section */
 #home {
-    position: relative;
-    z-index: 1;
     height: 100vh;
     background: var(--black);
-}
-#home::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url("bg.jpg") no-repeat center center/cover;
-    opacity: 5%;
-    z-index: -1;
 }
 
 /* Header */
 header {
-    padding: 0 60px;
-    height: 110px;
+    padding: 0 80px;
+    height: 80px;
     position: fixed;
     top: 0;
     left: 0;
@@ -108,31 +140,40 @@ header {
     justify-content: space-between;
     color: var(--white);
     transition: all .25s ease-in-out;
+    background: #181818;
 }
 header.sticky {
     height: 66px;
-    backdrop-filter: blur(50px);
 }
 header .logo {
-    font-family: var(--secondaryFont);
-    font-size: 28px;
-    font-weight: bold;
+    height: 46px;
+    width: 46px;
+    border-radius: 50%;
+    background: url(logo.jpeg) center / cover;
 }
 header nav {
-    margin-right: 120px;
+    margin-right: 60px;
     display: flex;
     align-items: center;
-    gap: 30px;
+    gap: 14px;
 }
 header nav a {
     color: var(--white);
     font-family: var(--secondaryFont);
     font-size: 15px;
     transition: all .2s;
+    padding: 3px 12px;
+    border-radius: 30px;
 }
-header nav a.active,
+header nav a.active {
+    color: var(--white);
+    background: var(--primary);
+}
 header nav a:hover {
     color: var(--primary);
+}
+header nav a.active:hover {
+    color: var(--white);
 }
 header .icons {
     display: flex;
@@ -169,38 +210,31 @@ label div {
 label div:last-child {
     margin-bottom: 0;
 }
-/* Animacja do "X" */
 #menu_checkbox:checked + label div:first-child {
     transform: rotate(45deg);
     top: 9px;
 }
-
 #menu_checkbox:checked + label div:nth-child(2) {
     opacity: 0;
 }
-
 #menu_checkbox:checked + label div:last-child {
     transform: rotate(-45deg);
     top: -9px;
 }
 
 
-
 /* Hero */
 .hero {
-    position: relative;
-    z-index: 2;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
     margin-top: 12%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 .hero h2 {
     font-family: var(--primaryFont);
     font-size: 20px;
     color: var(--primary);
+    margin-bottom: -5px;
 }
 .hero h1 {
     color: var(--white);
@@ -212,64 +246,40 @@ label div:last-child {
     color: var(--heroText);
     font-size: 24px;
     font-family: var(--secondaryFont);
-    width: 60%;
-    margin: 12px auto;
+    width: 56%;
+    margin-top: 16px;
 }
 .hero .buttons {
     display: flex;
     align-items: center;
-    gap: 30px;
-    margin-top: 16px;
+    gap: 20px;
+    margin-top: 60px;
 }
-.hero .buttons a {
-    padding: 8px 24px;
-    border: 2px solid var(--white);
-    font-family: var(--secondaryFont);
-    color: var(--white);
-    font-size: 18px;
-    background: linear-gradient(var(--white), var(--white));
-    background-repeat: no-repeat;
-    background-size: 0 100%;
-    transition: all .2s;
-    border-radius: 5px;
-    box-shadow: 0 4px 12px 0 #ffffff21;
+.hero .image {
+    position: absolute;
+    right: 100px;
+    bottom: 20px;
+    opacity: 14%;
 }
-.hero .buttons a:hover {
-    color: var(--black);
-    background-size: 100% 100%;
+.hero .image img {
+    height: 570px;
+    border-radius: 20px 20px 0 0;
+    filter: blur(20px);
 }
-.hero .arrow {
-    padding: 12px 15px;
-    border-radius: 50%;
-    margin-top: 12%;
-    animation: movingArrow 3s infinite; 
-    transition: all .2s ease;
-    background: linear-gradient(var(--primary), var(--primary));
-    background-repeat: no-repeat;
-    background-size: 100% 0;
-    border: 2px solid var(--primary);
-    box-shadow: 0 4px 12px 0 #ff4d6b21;
+.hero .imageBlured {
+    position: absolute;
+    right: 80px;
+    bottom: -4px;
 }
-.hero .arrow:hover {
-    background-size: 100% 100%;
-}
-.hero .arrow:hover i {
-    color: var(--white);
-}
-.hero .arrow i {
-    color: var(--primary);
-    font-size: 20px;
-}
-@keyframes movingArrow {
-    0% { transform: translateY(-14px); }
-    50% { transform: translateY(0); }
-    100% { transform: translateY(-14px); }
+.hero .imageBlured img {
+    height: 570px;
+    border-radius: 20px 20px 0 0;
 }
 
 
 /* About section */
 #about {
-    background: var(--black);
+    background: var(--lightBlack);
 }
 .about-container {
     display: flex;
@@ -321,7 +331,7 @@ label div:last-child {
 .about-container .text p {
     font-size: 17px;
     color: var(--grey);
-    margin-bottom: 36px;
+    margin-bottom: 70px;
     line-height: 180%;
 }
 .about-container .button {
@@ -344,7 +354,7 @@ label div:last-child {
 
 /* Skills section */
 #skills {
-    background: var(--lightBlack);
+    background: var(--black);
 }
 .skills-container {
     display: flex;
@@ -377,7 +387,6 @@ label div:last-child {
     height: 6px;
     border-radius: 5px;
 }
-
 /* HTML */
 .skill.html .filled-bar {
     width: 96%;
@@ -386,7 +395,6 @@ label div:last-child {
 .skill.html .skill-info h3 {
     color: #E34C26;
 }
-
 /* CSS */
 .skill.css .filled-bar {
     width: 90%;
@@ -395,7 +403,6 @@ label div:last-child {
 .skill.css .skill-info h3 {
     color: #2965F1;
 }
-
 /* Bootstrap */
 .skill.bootstrap .filled-bar {
     width: 50%;
@@ -404,7 +411,6 @@ label div:last-child {
 .skill.bootstrap .skill-info h3 {
     color: #AB83E8;
 }
-
 /* Tailwind */
 .skill.tailwind .filled-bar {
     width: 40%;
@@ -413,7 +419,6 @@ label div:last-child {
 .skill.tailwind .skill-info h3 {
     color: #38BDF7;
 }
-
 /* JavaScript */
 .skill.js .filled-bar {
     width: 70%;
@@ -422,7 +427,6 @@ label div:last-child {
 .skill.js .skill-info h3 {
     color: #F0DB4F;
 }
-
 /* React */
 .skill.react .filled-bar {
     width: 40%;
@@ -431,7 +435,6 @@ label div:last-child {
 .skill.react .skill-info h3 {
     color: #61DBFB;
 }
-
 /* Figma */
 .skill.figma .filled-bar {
     width: 80%;
@@ -444,7 +447,7 @@ label div:last-child {
 
 /* Projects section */
 #projects {
-    background: var(--black);
+    background: var(--lightBlack);
 }
 .projects-container {
     display: flex;
@@ -467,8 +470,8 @@ label div:last-child {
 }
 .project {
     z-index: 0;
-    width: 400px;
-    height: 500px;
+    width: 380px;
+    height: 600px;
     font-family: var(--secondaryFont);
 }
 .projects-container.designs {
@@ -485,14 +488,19 @@ label div:last-child {
     border-radius: 0;
 }
 .project .image {
-    height: 240px;
+    height: 360px;
     width: 100%;
     border-radius: 10px;
+    overflow: hidden; 
 }
 .project .image img {
     height: 100%;
     width: 100%;
     border-radius: 7px;
+    transition: transform 0.3s ease;
+}
+.project .image img:hover {
+    transform: scale(1.3); /* Zmiana skali obrazu na hover */
 }
 .project-info {
     margin-top: 16px;
@@ -525,13 +533,15 @@ label div:last-child {
 
 /* Contact section */
 #contact {
-    background: var(--lightBlack);
+    background: var(--black);
 }
 .form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-start;
+    width: max-content;
+    margin: 0 auto;
 }
 .form .input-wrapper {
     margin-bottom: 24px;
@@ -541,42 +551,47 @@ label div:last-child {
 }
 .form .input-wrapper i {
     position: absolute;
-    left: 14px;
-    top: 15px;
-    color: var(--white);
+    left: 20px;
+    top: 16px;
+    color: #696969;
     font-size: 18px;
 }
 .form .input-wrapper input,
 .form .input-wrapper textarea {
     width: 100%;
-    padding: 10px 10px 10px 44px;
-    border: 1px solid var(--white);
-    border-radius: 5px;
+    padding: 11px 50px;
+    border: 1px solid #393939;
+    border-radius: 30px;
     font-family: var(--secondaryFont);
     font-size: 16px;
     height: 48px;
     background: var(--black);
     color: var(--white);
 }
+.form .input-wrapper input:focus,
+.form .input-wrapper textarea:focus {
+    border: 1px solid #696969;
+}
 .form .input-wrapper input::placeholder {
     color: var(--grey);
 }
 .form textarea {
     min-height: 300px;
-    resize: vertical;
+    resize: none;
 }
 .form input[type="submit"] {
-    width: 500px;
-    border-radius: 5px;
+    width: 220px;
+    border-radius: 30px;
     background: var(--primary);
     color: var(--white);
     font-size: 17px;
-    height: 52px;
+    height: 48px;
     cursor: pointer;
+    font-weight: 500;
     font-family: var(--secondaryFont);
     transition: all .2s ease;
     border: 1px solid var(--primary);
-    box-shadow: 0 4px 12px 0 #ff4d6b21;
+    align-self: flex-start;
 }
 .form input[type="submit"]:hover {
     background: var(--primaryHover);
@@ -586,7 +601,7 @@ label div:last-child {
 /* Footer */
 footer {
     padding: 50px 60px;
-    background: var(--black);
+    background: var(--lightBlack);
     display: flex;
     flex-direction: column;
     align-items: center;

@@ -4,16 +4,16 @@
         margin-top: 12%;
     }
     .hero h1 {
-        font-size: 64px;
+        font-size: 70px;
     }
     .hero p {
-        font-size: 20px;
+        font-size: 22px;
     }
     .hero .arrow {
         margin-top: 8%;
     }
     #about .text {
-        width: 40%;
+        width: 50%;
     }
     #about .image-container img {
         height: 420px;
@@ -34,7 +34,7 @@
     header {
         padding: 0 20px;
         height: 60px;
-        background: #2b2b2b;
+        background: #181818;
     }
     header.sticky {
         height: 60px;
