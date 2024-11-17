@@ -12,7 +12,7 @@
     --black: #111111;
     --lightBlack: #141414;
     --grey: #9f9f9f;
-    --heroText: #e0e0e0;
+    --heroText: #d3d3d3;
     --primaryFont: 'Montserrat', sans-serif;
     --secondaryFont: 'Poppins', sans-serif;
 }
@@ -94,6 +94,11 @@ section {
     transition: all .2s;
     border-radius: 40px;
     box-shadow: 0 4px 12px 0 #3596e021;
+    display: inline-block;
+}
+.btnFilled {
+    background-size: 100% 100%;
+    color: var(--white);
 }
 .btn i {
     margin-right: 4px;
@@ -102,6 +107,11 @@ section {
     color: var(--white);
     background-size: 100% 100%;
 }
+.btnFilled:hover {
+    color: var(--primary);
+    background-size: 0 100%;
+}
+
 
 /* Overlay */
 .overlay {
@@ -119,6 +129,7 @@ section {
 .overlay.active {
     transform: translateX(0);
 }
+
 
 /* Home section */
 #home {
@@ -145,11 +156,10 @@ header {
 header.sticky {
     height: 66px;
 }
-header .logo {
-    height: 46px;
-    width: 46px;
-    border-radius: 50%;
-    background: url(logo.jpeg) center / cover;
+header .logo img {
+    height: 60px;
+    width: 60px;
+    clip-path: circle(40%);
 }
 header nav {
     margin-right: 60px;
@@ -162,7 +172,7 @@ header nav a {
     font-family: var(--secondaryFont);
     font-size: 15px;
     transition: all .2s;
-    padding: 3px 12px;
+    padding: 4px 14px;
     border-radius: 30px;
 }
 header nav a.active {
@@ -176,7 +186,7 @@ header nav a.active:hover {
     color: var(--white);
 }
 header nav a i {
-    display: none !important;
+    margin-right: 6px;
 }
 header .icons {
     display: flex;
@@ -228,222 +238,225 @@ label div:last-child {
 
 /* Hero */
 .hero {
-    margin-top: 12%;
+    margin-top: 10%;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.hero h2 {
+.hero .content h2 {
     font-family: var(--primaryFont);
-    font-size: 20px;
-    color: var(--primary);
-    margin-bottom: -5px;
-}
-.hero h1 {
+    font-size: 28px;
+    font-weight: 500;
     color: var(--white);
-    font-size: 76px;
+}
+.hero .content h2 span {
+    color: var(--primary);
+}
+.hero .content h1 {
+    color: var(--white);
+    font-size: 64px;
     font-family: var(--primaryFont);
 }
-.hero p {
+.hero .content p {
     font-weight: 300;
     color: var(--heroText);
-    font-size: 24px;
+    font-size: 22px;
     font-family: var(--secondaryFont);
-    width: 56%;
+    width: 50%;
     margin-top: 16px;
 }
-.hero .buttons {
+.hero .content .buttons {
+    margin-top: 60px;
     display: flex;
     align-items: center;
     gap: 20px;
-    margin-top: 60px;
 }
-.hero .image {
-    position: absolute;
-    right: 100px;
-    bottom: 20px;
-    opacity: 14%;
+.hero .content .image img {
+    height: 160px;
+    clip-path: circle(40%);
 }
-.hero .image img {
-    height: 570px;
-    border-radius: 20px 20px 0 0;
-    filter: blur(20px);
-}
-.hero .imageBlured {
+/* Showcase */
+.hero .showcase {
     position: absolute;
     right: 80px;
-    bottom: -4px;
+    bottom: 20%;
+    transform: translate(0,0);
+    display: flex;
 }
-.hero .imageBlured img {
-    height: 570px;
-    border-radius: 20px 20px 0 0;
+.hero .showcase .image {
+    height: 400px;
+}
+.hero .showcase .image img {
+    height: 100%;
+    border-radius: 30px;
+    box-shadow: 10px 10px 34px 0 #13131334;
+    animation: rotateImage 4s infinite alternate ease-in-out;
+}
+.hero .showcase .image:nth-child(1) {
+    transform: translate(600px, -200px);
+}
+.hero .showcase .image:nth-child(2) {
+    transform: translate(100px, 100px);
+}
+@keyframes rotateImage {
+    0% {
+        transform: rotate(-3deg);
+    }
+    100% {
+        transform: rotate(3deg);
+    }
+}
+/* Circle */
+.hero .circle {
+    position: absolute;
+    right: 80px;
+    bottom: 8%;
+    transform: translate(0,0);
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    background: var(--grey);
+    filter: blur(50px);
+    opacity: 20%;
 }
 
 
 /* About section */
 #about {
+    position: relative;
     background: var(--lightBlack);
 }
-.about-container {
+#about .about-container {
     display: flex;
     flex-direction: row-reverse;
-    justify-content: space-between;
-}
-.about-container .images {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
     justify-content: center;
-    gap: 40px;
+    gap: 80px;
 }
-.about-container .images img {
-    width: 360px;
-    height: 460px;
-    border-radius: 5px;
-    box-shadow: 0 4px 12px 0 #ffffff0c;
+#about .image img {
+    height: 800px;
+    border-radius: 30px;
+    box-shadow: 10px 10px 34px 0 #79797925;
 }
-.about-container .images .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 4px;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: var(--white);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
+#about .content {
     font-family: var(--secondaryFont);
-    border-radius: 5px;
-    font-size: 20px;
+    width: 50%;
 }
-.about-container .images .image-container:hover .overlay,
-.about-container .images .image-container:active .overlay {
-    opacity: 1;
+#about .wrapper {
+    margin-bottom: 30px;
+    padding: 20px 30px;
+    border-radius: 30px;
+    background: #1f1f1f;
 }
-.about-container .text {
-    font-family: var(--secondaryFont);
-    width: 40%;
+#about .wrapper.highlighted {
+    background: var(--primary);
 }
-.about-container .text h2 {
-    font-size: 38px;
+#about .wrapper.highlighted p {
+    color: #ebf6ff;
+}
+#about .content h3 {
+    font-size: 24px;
     color: var(--white);
 }
-.about-container .text p {
+#about .content p {
+    margin-top: 10px;
     font-size: 17px;
     color: var(--grey);
-    margin-bottom: 70px;
     line-height: 180%;
 }
-.about-container .button {
-    padding: 8px 24px;
-    border: 2px solid var(--white);
-    font-family: var(--secondaryFont);
-    color: var(--white);
-    font-size: 15px;
-    background: linear-gradient(var(--white), var(--white));
-    background-repeat: no-repeat;
-    background-size: 0 100%;
-    transition: all .2s;
-    border-radius: 5px;
-    box-shadow: 0 4px 12px 0 #ffffff21;
+#about .btn {
+    margin-top: 60px;
 }
-.about-container .button:hover {
-    color: var(--black);
-    background-size: 100% 100%;
-}
+
 
 /* Skills section */
 #skills {
     background: var(--black);
 }
-.skills-container {
+#skills .skills-container {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 50px;
 }
-.skill {
+#skills .skill {
     display: flex;
     flex-direction: column;
     gap: 6px;
     color: var(--white);
     font-family: var(--secondaryFont);
 }
-.skill .skill-info {
+#skills .skill .skill-info {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
-.skill .skill-info h3 {
+#skills .skill .skill-info h3 {
     font-weight: 500;
 }
-.skill-bar {
+#skills .skill-bar {
     height: 6px;
     border-radius: 5px;
     width: 600px;
     background: var(--white);
 }
-.skill-bar .filled-bar {
+#skills .skill-bar .filled-bar {
     height: 6px;
     border-radius: 5px;
 }
 /* HTML */
-.skill.html .filled-bar {
+#skills .skill.html .filled-bar {
     width: 96%;
     background: #E34C26;
 }
-.skill.html .skill-info h3 {
+#skills .skill.html .skill-info h3 {
     color: #E34C26;
 }
 /* CSS */
-.skill.css .filled-bar {
+#skills .skill.css .filled-bar {
     width: 90%;
     background: #2965F1;
 }
-.skill.css .skill-info h3 {
+#skills .skill.css .skill-info h3 {
     color: #2965F1;
 }
 /* Bootstrap */
-.skill.bootstrap .filled-bar {
+#skills .skill.bootstrap .filled-bar {
     width: 50%;
     background: #AB83E8;
 }
-.skill.bootstrap .skill-info h3 {
+#skills .skill.bootstrap .skill-info h3 {
     color: #AB83E8;
 }
 /* Tailwind */
-.skill.tailwind .filled-bar {
+#skills .skill.tailwind .filled-bar {
     width: 40%;
     background: #38BDF7;
 }
-.skill.tailwind .skill-info h3 {
+#skills .skill.tailwind .skill-info h3 {
     color: #38BDF7;
 }
 /* JavaScript */
-.skill.js .filled-bar {
+#skills .skill.js .filled-bar {
     width: 70%;
     background: #F0DB4F;
 }
-.skill.js .skill-info h3 {
+#skills .skill.js .skill-info h3 {
     color: #F0DB4F;
 }
 /* React */
-.skill.react .filled-bar {
+#skills .skill.react .filled-bar {
     width: 40%;
     background: #61DBFB;
 }
-.skill.react .skill-info h3 {
+#skills .skill.react .skill-info h3 {
     color: #61DBFB;
 }
 /* Figma */
-.skill.figma .filled-bar {
+#skills .skill.figma .filled-bar {
     width: 80%;
     background: #0ACF83;
 }
-.skill.figma .skill-info h3 {
+#skills .skill.figma .skill-info h3 {
     color: #0ACF83;
 }
 
@@ -452,7 +465,7 @@ label div:last-child {
 #projects {
     background: var(--lightBlack);
 }
-.projects-container {
+#projects .projects-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -461,75 +474,65 @@ label div:last-child {
     column-gap: 100px;
     width: 100%;
 }
-.projects-container::-webkit-scrollbar {
-    height: 6px;
-}
-.projects-container::-webkit-scrollbar-track {
-    border-radius: 10px;
-}
-.projects-container::-webkit-scrollbar-thumb {
-    background: var(--grey);
-    border-radius: 10px;
-}
-.project {
+#projects .project {
     z-index: 0;
     width: 380px;
     height: 600px;
     font-family: var(--secondaryFont);
 }
-.projects-container.designs {
+#projects .projects-container.designs {
     column-gap: 40px;
 }
-.projects-container.designs .image {
+#projects .projects-container.designs .image {
     height: 100% !important;
 }
-.projects-container.designs .project {
+#projects .projects-container.designs .project {
     width: 640px !important;
     height: 640px !important;
 }
-.projects-container.designs .image img {
+#projects .projects-container.designs .image img {
     border-radius: 0;
 }
-.project .image {
+#projects .project .image {
     height: 360px;
     width: 100%;
     border-radius: 10px;
     overflow: hidden; 
 }
-.project .image img {
+#projects .project .image img {
     height: 100%;
     width: 100%;
     border-radius: 7px;
     transition: transform 0.3s ease;
 }
-.project .image img:hover {
+#projects .project .image img:hover {
     transform: scale(1.3); /* Zmiana skali obrazu na hover */
 }
-.project-info {
+#projects .project-info {
     margin-top: 16px;
 }
-.project-title {
+#projects .project-title {
     color: var(--white);
 }
-.project-desc {
+#projects .project-desc {
     color: var(--grey);
 }
-.project-tech {
+#projects .project-tech {
     margin-top: 10px;
-    font-size: 14px;
+    font-size: 15px;
     color: var(--primary);
 }
-.project .links {
+#projects .project .links {
     margin-top: 22px;
     cursor: default;
 }
-.project .links a {
+#projects .project .links a {
     color: var(--white);
     font-size: 19px;
     margin: 0 6px;
     transition: all .2s;
 }
-.project .links a:hover {
+#projects .project .links a:hover {
     color: var(--primary);
 }
 
@@ -538,7 +541,7 @@ label div:last-child {
 #contact {
     background: var(--black);
 }
-.form {
+#contact .form {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -546,48 +549,48 @@ label div:last-child {
     width: max-content;
     margin: 0 auto;
 }
-.form .input-wrapper {
+#contact .form .input-wrapper {
     margin-bottom: 24px;
     position: relative;
     z-index: 0;
     width: 500px;
 }
-.form .input-wrapper i {
+#contact .form .input-wrapper i {
     position: absolute;
     left: 20px;
     top: 16px;
     color: #696969;
-    font-size: 18px;
+    font-size: 17px;
 }
-.form .input-wrapper input,
-.form .input-wrapper textarea {
+#contact .form .input-wrapper input,
+#contact .form .input-wrapper textarea {
     width: 100%;
     padding: 11px 50px;
     border: 1px solid #393939;
     border-radius: 30px;
     font-family: var(--secondaryFont);
-    font-size: 16px;
+    font-size: 15px;
     height: 48px;
     background: var(--black);
     color: var(--white);
 }
-.form .input-wrapper input:focus,
-.form .input-wrapper textarea:focus {
+#contact .form .input-wrapper input:focus,
+#contact .form .input-wrapper textarea:focus {
     border: 1px solid #696969;
 }
-.form .input-wrapper input::placeholder {
+#contact .form .input-wrapper input::placeholder {
     color: var(--grey);
 }
-.form textarea {
+#contact .form textarea {
     min-height: 300px;
     resize: none;
 }
-.form input[type="submit"] {
+#contact .form input[type="submit"] {
     width: 220px;
     border-radius: 30px;
     background: var(--primary);
     color: var(--white);
-    font-size: 17px;
+    font-size: 16px;
     height: 48px;
     cursor: pointer;
     font-weight: 500;
@@ -596,7 +599,7 @@ label div:last-child {
     border: 1px solid var(--primary);
     align-self: flex-start;
 }
-.form input[type="submit"]:hover {
+#contact .form input[type="submit"]:hover {
     background: var(--primaryHover);
 }
 

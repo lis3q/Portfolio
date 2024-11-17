@@ -9,9 +9,11 @@
     .hero p {
         font-size: 22px;
     }
-    .hero .arrow {
-        margin-top: 8%;
+    .hero .image img,
+    .hero .imageBlured img {
+        height: 570px;
     }
+    
     #about .text {
         width: 50%;
     }
@@ -80,7 +82,7 @@
         align-items: center;
         justify-content: center;
         padding: 4px 12px;
-        gap: 12px;
+        gap: 6px;
     }
     header nav.active {
         transform: translateY(0);
