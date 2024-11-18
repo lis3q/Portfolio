@@ -35,17 +35,25 @@
         font-size: 14px !important;
     }
     .section-heading h2::before {
-        left: -90px;
+        left: -60px;
     }
     .section-heading h2::after {
-        right: -90px;
+        right: -60px;
     }
+    .section-heading h2::before,
+    .section-heading h2::after {
+    width: 42px; 
+}
 
     /* Header */
     header {
         padding: 0 20px;
         height: 60px;
         background: #181818;
+    }
+    header .logo img {
+        height: 54px;
+        width: 54px;
     }
     header.sticky {
         height: 60px;
@@ -92,58 +100,81 @@
     }
 
     #home {
-        min-height: 70vh;
+        min-height: 120vh;
     }
 
     /* Hero */
     .hero {
-        margin-top: 20%;
+        flex-direction: column;
+        margin-top: 14%;
         text-align: center;
+        align-items: center;
+        justify-content: center;
+        gap: 140px;
     }
-    .hero h2 {
-        font-size: 17px;
-        margin-bottom: 2px;
+    .hero .content .image img {
+        height: 200px;
     }
-    .hero h1 {
-        font-size: 46px;
+    .hero .content h2 {
+        font-size: 20px;
+        margin-bottom: 24px;
     }
-    .hero p {
+    .hero .content h1 {
+        font-size: 50px;
+    }
+    .hero .content p {
         font-size: 18px;
         width: 100%;
         text-align: justify;
-    }
-    .hero .buttons {
-        justify-content: center;
-    }
-    .hero .buttons a {
-        font-size: 15px;
-    }
-    .hero .image,
-    .hero .imageBlured {
         display: none;
     }
+    .hero .content .buttons {
+        justify-content: center;
+    }
+    .hero .content .buttons a {
+        font-size: 15px;
+    }
+    .hero .showcase {
+        right: 22%;
+        bottom: 0;
+    }
+    .hero .showcase .image {
+        height: 220px;
+    }
+    .hero .showcase .image:nth-child(1) {
+        transform: translate(600px, 30px);
+    }
+    .hero .circle {
+        right: 0;
+        bottom: -14%;
+        width: 400px;
+        height: 400px;
+        opacity: 14%;
+    }
+    
 
     /* About */
     #about .about-container {
-        flex-direction: column;
+        flex-direction: column-reverse;
         gap: 36px;
     }
-    #about .text {
+    #about .content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    #about .image img {
+        height: 460px;
         width: 100%;
     }
-    #about .images img {
-        width: 100%;
-        height: 420px;
+    #about .content h3 {
+        font-size: 20px;
     }
-    #about .text h2 {
-        font-size: 30px;
-    }
-    #about .text p {
-        text-align: justify;
-        font-size: 16px;
-    }
-    #about .button {
+    #about .content p {
         font-size: 15px;
+        text-align: justify;
     }
 
     /* Skills */
@@ -154,55 +185,61 @@
         width: 100%;
     }
     #skills .skill-info h3 {
-        font-size: 18px;
+        font-size: 17px;
     }
     #skills .skill-info p {
-        font-size: 14px;
+        font-size: 15px;
     }
 
     /* Projects */
-    .projects-container {
+    #projects .projects-container {
         padding-bottom: 24px;
         gap: 60px;
     }
-    .project {
+    #projects .project {
         width: 300px;
         height: max-content;
     }
-    .project .image {
+    #projects .project .image {
         height: 260px;
     }
-    .project-title {
+    #projects .project-title {
         font-size: 20px;
     }
-    .project-tech {
+    #projects .project-tech {
         font-size: 14px;
     }
-    .project .links a {
-        font-size: 17px;
+    #projects .project .links a {
+        font-size: 18px;
     }
-    .projects-container.designs .project {
+    #projects .projects-container.designs .project {
         width: max-content;
-        height: 360px !important;
+        height: 100% !important;
     }
 
     /* Contact */
-    .form .input-wrapper {
+    #contact .form {
         width: 100%;
     }
-    .form .input-wrapper i {
+    #contact .form .input-wrapper {
+        width: 100%;
+    }
+    #contact .form .input-wrapper i {
         font-size: 17px;
     }
-    .form .input-wrapper input,
-    .form .input-wrapper textarea {
-        font-size: 16px;
+    #contact .form .input-wrapper input,
+    #contact .form .input-wrapper textarea {
+        font-size: 15px;
     }
-    .form input[type="submit"] {
-        font-size: 16px;
-        height: 48px;
+    #contact .form input[type="submit"] {
+        font-size: 15px;
+        width: 100%;
     }
 
     /* Footer */
+    footer {
+        padding: 50px 20px;
+    }
     footer .links {
         flex-direction: column;
         align-items: center;

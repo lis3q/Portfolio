@@ -5,61 +5,37 @@ window.addEventListener('scroll', function() {
 });
 
 // ScrollReveal
-ScrollReveal().reveal('.hero h1, .hero h2, #about .text h2', {
+ScrollReveal().reveal('.hero .image.top, .hero .circle, #skills .skill', {
     delay: 300,
-    duration: 700,
+    duration: 800,
     origin: 'top',
-    distance: '20px',
+    distance: '80px',
     interval: 200,
     easing: 'ease-in-out'
 });
-ScrollReveal().reveal('.hero p, .hero .buttons, #about .text p, #about .text a', {
+ScrollReveal().reveal('.hero .image.bottom, .section-heading', {
     delay: 300,
-    duration: 700,
+    duration: 800,
     origin: 'bottom',
-    distance: '20px',
+    distance: '80px',
     interval: 200,
     easing: 'ease-in-out',
 });
-ScrollReveal().reveal('.section-heading', {
+ScrollReveal().reveal('.hero .content img, .hero h1, .hero .buttons, #about img', {
     delay: 300,
-    duration: 500,
-    origin: 'top',
-    distance: '20px',
-    easing: 'ease-in-out',
-    interval: 200,
-});
-ScrollReveal().reveal('.about-container .left-img, .skill.html, .skill.bootstrap, .skill.js, .skill.figma', {
-    delay: 300,
-    duration: 700,
+    duration: 800,
     origin: 'left',
-    distance: '20px',
+    distance: '80px',
     interval: 200,
     easing: 'ease-in-out',
 });
-ScrollReveal().reveal('.about-container .center-img', {
+ScrollReveal().reveal('.hero h2, .hero p, .hero .image.right, #about .wrapper, #about .btn', {
     delay: 300,
-    duration: 700,
-    origin: 'top',
-    distance: '20px',
-    interval: 200,
-    easing: 'ease-in-out',
-});
-ScrollReveal().reveal('.about-container .right-img, .skill.css, .skill.tailwind, .skill.react', {
-    delay: 300,
-    duration: 700,
+    duration: 800,
     origin: 'right',
-    distance: '20px',
+    distance: '80px',
     interval: 200,
     easing: 'ease-in-out',
-});
-ScrollReveal().reveal('#contact form', {
-    delay: 300,
-    duration: 1000,
-    origin: 'bottom',
-    distance: '20px',
-    opacity: 0,
-    interval: 200,
 });
 
 
