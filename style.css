@@ -586,7 +586,7 @@ label div:last-child {
     resize: none;
 }
 #contact .form input[type="submit"] {
-    width: 220px;
+    width: 200px;
     border-radius: 30px;
     background: var(--primary);
     color: var(--white);

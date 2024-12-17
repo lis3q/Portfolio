@@ -100,7 +100,7 @@
     }
 
     #home {
-        min-height: 120vh;
+        min-height: 80vh;
     }
 
     /* Hero */
@@ -137,17 +137,19 @@
     .hero .showcase {
         right: 22%;
         bottom: 0;
+        display: none;
     }
     .hero .showcase .image {
-        height: 220px;
+        height: 200px;
     }
     .hero .showcase .image:nth-child(1) {
         transform: translate(600px, 30px);
     }
     .hero .circle {
+        display: none;
         right: 0;
         bottom: -14%;
-        width: 400px;
+        width: 420px;
         height: 400px;
         opacity: 14%;
     }
@@ -174,7 +176,8 @@
     }
     #about .content p {
         font-size: 15px;
-        text-align: justify;
+        text-align: left;
+        line-height: 160%;
     }
 
     /* Skills */
