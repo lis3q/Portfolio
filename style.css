@@ -172,7 +172,7 @@ header nav a {
     font-family: var(--secondaryFont);
     font-size: 15px;
     transition: all .2s;
-    padding: 4px 14px;
+    padding: 8px 14px;
     border-radius: 30px;
 }
 header nav a.active {
@@ -243,6 +243,14 @@ label div:last-child {
     justify-content: space-between;
     align-items: center;
 }
+.hero .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    z-index: 1;
+}
 .hero .content h2 {
     font-family: var(--primaryFont);
     font-size: 28px;
@@ -264,6 +272,7 @@ label div:last-child {
     font-family: var(--secondaryFont);
     width: 50%;
     margin-top: 16px;
+    text-align: center;
 }
 .hero .content .buttons {
     margin-top: 60px;
@@ -271,54 +280,13 @@ label div:last-child {
     align-items: center;
     gap: 20px;
 }
-.hero .content .image img {
+.hero .content .MyImage {
     height: 260px;
+    width: 260px;
     clip-path: circle(40%);
+    background: url(logo.jpeg) bottom/cover;
 }
-/* Showcase */
-.hero .showcase {
-    position: absolute;
-    right: 80px;
-    bottom: 20%;
-    transform: translate(0,0);
-    display: flex;
-}
-.hero .showcase .image {
-    height: 400px;
-}
-.hero .showcase .image img {
-    height: 100%;
-    border-radius: 30px;
-    box-shadow: 10px 10px 34px 0 #13131334;
-    animation: rotateImage 4s infinite alternate ease-in-out;
-}
-.hero .showcase .image:nth-child(1) {
-    transform: translate(600px, -200px);
-}
-.hero .showcase .image:nth-child(2) {
-    transform: translate(100px, 100px);
-}
-@keyframes rotateImage {
-    0% {
-        transform: rotate(-3deg);
-    }
-    100% {
-        transform: rotate(3deg);
-    }
-}
-/* Circle */
-.hero .circle {
-    position: absolute;
-    right: 80px;
-    bottom: 8%;
-    transform: translate(0,0);
-    width: 700px;
-    height: 700px;
-    border-radius: 50%;
-    background: var(--grey);
-    filter: blur(50px);
-    opacity: 20%;
-}
+
 
 
 /* About section */
@@ -335,7 +303,7 @@ label div:last-child {
 #about .image img {
     height: 800px;
     border-radius: 30px;
-    box-shadow: 10px 10px 34px 0 #79797925;
+    box-shadow: 10px 10px 34px 0 #7979790e;
 }
 #about .content {
     font-family: var(--secondaryFont);
@@ -403,62 +371,6 @@ label div:last-child {
     height: 6px;
     border-radius: 5px;
 }
-/* HTML */
-#skills .skill.html .filled-bar {
-    width: 96%;
-    background: #E34C26;
-}
-#skills .skill.html .skill-info h3 {
-    color: #E34C26;
-}
-/* CSS */
-#skills .skill.css .filled-bar {
-    width: 90%;
-    background: #2965F1;
-}
-#skills .skill.css .skill-info h3 {
-    color: #2965F1;
-}
-/* Bootstrap */
-#skills .skill.bootstrap .filled-bar {
-    width: 50%;
-    background: #AB83E8;
-}
-#skills .skill.bootstrap .skill-info h3 {
-    color: #AB83E8;
-}
-/* Tailwind */
-#skills .skill.tailwind .filled-bar {
-    width: 40%;
-    background: #38BDF7;
-}
-#skills .skill.tailwind .skill-info h3 {
-    color: #38BDF7;
-}
-/* JavaScript */
-#skills .skill.js .filled-bar {
-    width: 70%;
-    background: #F0DB4F;
-}
-#skills .skill.js .skill-info h3 {
-    color: #F0DB4F;
-}
-/* React */
-#skills .skill.react .filled-bar {
-    width: 40%;
-    background: #61DBFB;
-}
-#skills .skill.react .skill-info h3 {
-    color: #61DBFB;
-}
-/* Figma */
-#skills .skill.figma .filled-bar {
-    width: 80%;
-    background: #0ACF83;
-}
-#skills .skill.figma .skill-info h3 {
-    color: #0ACF83;
-}
 
 
 /* Projects section */
@@ -496,13 +408,13 @@ label div:last-child {
 #projects .project .image {
     height: 360px;
     width: 100%;
-    border-radius: 10px;
+    border-radius: 5px;
     overflow: hidden; 
 }
 #projects .project .image img {
     height: 100%;
     width: 100%;
-    border-radius: 7px;
+    border-radius: 5px;
     transition: transform 0.3s ease;
 }
 #projects .project .image img:hover {

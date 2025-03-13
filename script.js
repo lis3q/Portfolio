@@ -105,3 +105,16 @@ links.forEach(link => {
         navbar.classList.remove("active");
     })
 })
+
+// Skill bars
+document.querySelectorAll('.skill').forEach(function(skill) {
+    const percentage = skill.getAttribute('data-percentage');
+    const color = skill.getAttribute('data-color');
+
+    const filledBar = skill.querySelector('.filled-bar');
+    filledBar.style.width = percentage + '%';
+    filledBar.style.backgroundColor = color;
+    
+    const skillInfo = skill.querySelector('.skill-info h3');
+    skillInfo.style.color = color;
+});
